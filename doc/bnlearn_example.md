@@ -1,5 +1,5 @@
 ---
-title: "Cancer example with bnlearn"
+title: "Round-trip simulation example with bnlearn"
 author: "Bob Horton"
 date: "3/4/2021"
 output: 
@@ -24,11 +24,10 @@ library(tidyr)
 library(bnlearn)
 ```
 
-This examples follows Figure 2.1 in  [_Bayesian Artificial Intelligence_](https://bayesian-intelligence.com/publications/bai/), chapter 2.
+This example follows Figure 2.1 in  [_Bayesian Artificial Intelligence_](https://bayesian-intelligence.com/publications/bai/), [chapter 2[(https://bayesian-intelligence.com/publications/bai/book/BAI_Chapter2.pdf).
 
 
-
-Let's use the probabilities given in the figure to generate some simulated data, then see if `bnlearn` can determine the structure of the Bayes Net from the simulated data:
+We'll use the probabilities given in the figure to generate some simulated data, then see if `bnlearn` can determine the structure of the Bayes Net from the simulated data.
 
 
 ```r
@@ -80,7 +79,7 @@ Learn the structure:
 
 
 ```r
-cancer_structure <- simdata %>% fast.iamb # this os one of veveral structure-learning algorithmsgs
+cancer_structure <- simdata %>% fast.iamb # this is one of several structure-learning algorithms
 
 modelstring(cancer_structure)
 ```

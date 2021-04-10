@@ -4,8 +4,8 @@ A41	Other sepsis
 B02	Zoster [herpes zoster]
 B35	Dermatophytosis
 B37	Candidiasis
-C34	Malignant neoplasm of bronchus and lung	
-D12.6	Benign neoplasm of colon	
+C34	Malignant neoplasm of bronchus and lung
+D12.6	Benign neoplasm of colon
 D50	Iron deficiency anemia
 D62	Acute posthemorrhagic anemia
 D63	Anemia in chronic diseases classified elsewhere
@@ -16,11 +16,11 @@ E03	Other hypothyroidism
 E04.1	Thyroid nodule
 E10	Type 1 diabetes mellitus
 E11	Type 2 diabetes mellitus
-E16.2	Hypoglycemia, unspecified	
+E16.2	Hypoglycemia, unspecified
 E43	Unspecified severe protein-calorie malnutrition
 E44	Protein-calorie malnutrition of moderate and mild degree
 E46	Unspecified protein-calorie malnutrition
-E53.8	Vitamin B12 deficiency (non anemic)	
+E53.8	Vitamin B12 deficiency (non anemic)
 E55	Vitamin D deficiency
 E66	Overweight and obesity
 E78.00	Pure hypercholesterolemia
@@ -31,7 +31,7 @@ E83.42	Hypomagnesemia
 E83.51	Hypocalcemia
 E83.52	Hypercalcemia
 E86	Volume depletion
-E87.0	Hyperosmolality and hypernatremia	
+E87.0	Hyperosmolality and hypernatremia
 E87.1	Hypo-osmolality and hyponatremia
 E87.2	Acidosis
 E87.5	Hyperkalemia
@@ -39,27 +39,27 @@ E87.6	Hypokalemia
 F02	Dementia in other diseases classified elsewhere
 F03	Unspecified dementia
 F10	Alcohol related disorders
-F17	Nicotine dependence	
+F17	Nicotine dependence
 F31	Bipolar disorder
 F32	Major depressive disorder, single episod
 F33	Major depressive disorder, recurrent
 F41	Other anxiety disorders
 F41.1	Generalized anxiety disorder
 F43.10	PTSD (post-traumatic stress disorder)
-F43.21	Situational depression	
+F43.21	Situational depression
 F43.23	Situational mixed anxiety and depressive disorder
 F51.01	Primary insomnia
-F90	Attention-deficit hyperactivity disorders	
+F90	Attention-deficit hyperactivity disorders
 F98.8	Attention deficit disorder, unspecified hyperactivity presence
 G25.81	Restless legs syndrome
 G40	Epilepsy and recurrent seizures
 G43	Migraine
-G47.00	Insomnia, unspecified type	
+G47.00	Insomnia, unspecified type
 G47.30	Sleep apnea, unspecified
-G47.33	Obstructive sleep apnea (adult) (pediatric)	
+G47.33	Obstructive sleep apnea (adult) (pediatric)
 G47.9	Sleep disturbance
-G62.9	Neuropathy	
-G89.29	Other chronic pain	
+G62.9	Neuropathy
+G89.29	Other chronic pain
 G89.4	Chronic pain syndrome
 G93.40	Encephalopathy, unspecified
 G93.41	Metabolic encephalopathy
@@ -83,18 +83,18 @@ I34	Nonrheumatic mitral valve disorders
 I35	Nonrheumatic aortic valve disorders
 I42	Cardiomyopathy
 I47	Paroxysmal tachycardia
-I48	Atrial fibrillation and flutter	
+I48	Atrial fibrillation and flutter
 I49	Other cardiac arrhythmias
 I49.3	Ventricular premature depolarization
-I49.5	SSS (sick sinus syndrome)	
+I49.5	SSS (sick sinus syndrome)
 I50	Heart failure
 I51.7	Cardiomegaly
 I63	Cerebral infarction
-I65	Occlusion and stenosis of precerebral arteries, not resulting in cerebral infarction	
+I65	Occlusion and stenosis of precerebral arteries, not resulting in cerebral infarction
 I67	Other cerebrovascular diseases
 I70	Atherosclerosis
 I73	Other peripheral vascular diseases
-I95	Hypotension	
+I95	Hypotension
 I95.1	Orthostatic hypotension
 J00	Acute nasopharyngitis [common cold]
 J01	Acute sinusitis
@@ -114,14 +114,14 @@ J30.1	Seasonal allergic rhinitis due to pollen
 J30.2	Seasonal allergic rhinitis, unspecified trigger
 J30.89	Environmental and seasonal allergies
 J30.9	Allergic rhinitis
-J31.0	Chronic rhinitis	
-J32	Chronic sinusitis	
+J31.0	Chronic rhinitis
+J32	Chronic sinusitis
 J34	Other and unspecified disorders of nose and nasal sinuses
 J40	Bronchitis, not specified as acute or chronic
 J43	Emphysema
 J44	Other chronic obstructive pulmonary disease
-J45	Asthma	
-J69.0	Pneumonitis due to inhalation of food and vomit	
+J45	Asthma
+J69.0	Pneumonitis due to inhalation of food and vomit
 J84.10	Postinflammatory pulmonary fibrosis
 J90	Pleural effusion, not elsewhere classified
 J96.00	Acute respiratory failure
@@ -131,7 +131,7 @@ J96.11	Chronic respiratory failure with hypoxia
 J96.21	Acute and chronic respiratory failure with hypoxia
 J96.22	Acute and chronic respiratory failure with hypercapnia
 J98	Other respiratory disorders
-J98.11	Atelectasis	
+J98.11	Atelectasis
 J98.8	Wheezing-associated respiratory infection (WARI)
 K21	Gastro-esophageal reflux disease
 K29.50	Unspecified chronic gastritis without bleeding
@@ -143,12 +143,12 @@ K58	Irritable bowel syndrom
 K59.09	Other constipation
 K62.5	Rectal bleeding
 K64	Hemorrhoids and perianal venous thrombosis
-K76	Other diseases of liver	
+K76	Other diseases of liver
 K76.89	Other chronic nonalcoholic liver disease
 K80	Cholelithiasis
-K92.1	Melena	
+K92.1	Melena
 K92.2	Gastrointestinal hemorrhage, unspecified
-L01	Impetigo	
+L01	Impetigo
 L03	Cellulitis and acute lymphangitis
 L03.90	Cellulitis
 L25	Unspecified contact dermatitis
@@ -163,13 +163,13 @@ M06	Other rheumatoid arthritis
 M10	Gout
 M12	Other and unspecified arthropathy
 M17	Osteoarthritis of knee
-M19	Other and unspecified osteoarthritis	
+M19	Other and unspecified osteoarthritis
 M25	Other joint disorder, not elsewhere classified
 M47	Spondylosis
 M48	Other spondylopathies
 M50.30	DDD (degenerative disc disease), cervical
 M51	Thoracic, thoracolumbar, and lumbosacral intervertebral disc disorders
-M54	Dorsalgia	
+M54	Dorsalgia
 M62.81	Muscle weakness (generalized)
 M62.838	Muscle spasm
 M79.10	Myalgia
@@ -180,11 +180,11 @@ M85.80	Osteopenia
 N17	Acute kidney failure
 N18	Chronic kidney disease (CKD)
 N20	Calculus of kidney and ureter
-N28.1	Cyst of kidney, acquired	
-N28.9	Renal insufficiency	
-N30	Cystitis	
-N39.0	Urinary tract infection, site not specified	
-N40	Benign prostatic hyperplasia	
+N28.1	Cyst of kidney, acquired
+N28.9	Renal insufficiency
+N30	Cystitis
+N39.0	Urinary tract infection, site not specified
+N40	Benign prostatic hyperplasia
 N52	Male erectile dysfunction
 N76.0	Acute vaginitis
 N89.8	Vaginal discharge
@@ -200,25 +200,25 @@ R06.02	Shortness of breath
 R06.03	Acute respiratory distress
 R06.09	Other dyspnea and respiratory abnormality
 R06.2	Wheezing
-R06.83	Snoring	
+R06.83	Snoring
 R07.81	Pleurodynia
 R07.89	Other chest pain
-R07.9	Chest pain, unspecified	
-R09.02	Hypoxemia	
-R09.81	Nasal congestion	
-R09.82	PND (post-nasal drip)	
+R07.9	Chest pain, unspecified
+R09.02	Hypoxemia
+R09.81	Nasal congestion
+R09.82	PND (post-nasal drip)
 R09.89	Chest congestion
 R10	Abdominal and pelvic pain
-R11	Nausea and vomiting	
-R13	Aphagia and dysphagia	
+R11	Nausea and vomiting
+R13	Aphagia and dysphagia
 R14	Flatulence and related conditions
 R19.5	Other fecal abnormalities
-R19.7	Diarrhea	
+R19.7	Diarrhea
 R20.0	Anesthesia of skin
 R20.2	Paresthesia of skin
-R21	Rash and other nonspecific skin eruption	
+R21	Rash and other nonspecific skin eruption
 R25.1	Tremor
-R25.2	Leg cramps	
+R25.2	Leg cramps
 R26	Abnormalities of gait and mobility
 R29.6	Frequent falls
 R29.898	Muscular deconditioning
@@ -227,11 +227,11 @@ R31	Hematuria
 R32	Unspecified urinary incontinence
 R33	Retention of urine
 R35	Polyuria
-R39.9	UTI symptoms	
+R39.9	UTI symptoms
 R41	Other symptoms and signs involving cognitive functions and awareness
 R42	Dizziness and giddiness
 R50	Fever of other and unknown origin
-R51	Headache	
+R51	Headache
 R53	Malaise and fatigue
 R55	Syncope and collapse
 R56	Convulsions, not elsewhere classified
@@ -240,32 +240,32 @@ R60.0	Localized edema
 R60.9	Edema
 R63.0	Anorexia
 R63.4	Weight loss
-R63.5	Weight gain	
+R63.5	Weight gain
 R65.20	Severe sepsis without septic shock
 R65.21	Severe sepsis with septic shock
-R68.83	Chills	
+R68.83	Chills
 R68.89	Flu-like symptoms
 R73	Elevated blood glucose level
 R74.8	Elevated liver enzymes
 R79.1	Abnormal coagulation profile
-R91.1	Solitary pulmonary nodule	
+R91.1	Solitary pulmonary nodule
 R94.31	Abnormal EKG
 R94.5	Elevated LFTs
-S09	Other and unspecified injuries of head	
+S09	Other and unspecified injuries of head
 T14.8XXA	Hematoma
-W19	Unspecified fall	
+W19	Unspecified fall
 W57	Bitten or stung by nonvenomous insect and other nonvenomous arthropods
 Z22.322	Carrier or suspected carrier of methicillin resistant Staphylococcus aureus
 Z37.0	Single live birth
 Z51.11	Encounter for antineoplastic chemotherapy
 Z51.89	Other specified rehabilitation procedure(V57.89)
 Z66	Do not resuscitate
-Z71.3	Dietary counseling and surveillance	
+Z71.3	Dietary counseling and surveillance
 Z78.0	Asymptomatic menopausal state
-Z79.01	Long term (current) use of anticoagulants	
+Z79.01	Long term (current) use of anticoagulants
 Z79.02	Long term (current) use of antithrombotics/antiplatelets
 Z79.4	Long term (current) use of insulin
-Z79.82	Long term (current) use of aspirin	
+Z79.82	Long term (current) use of aspirin
 Z79.84	Long term (current) use of oral hypoglycemic drugs
 Z79.891	Long term (current) use of opiate analgesic
 Z82.49	Family history of ischemic heart disease and other diseases of the circulatory system
@@ -274,19 +274,19 @@ Z86.010	Personal history of colonic polyps
 Z86.14	Personal history of Methicillin resistant Staphylococcus aureus infection
 Z86.19	Personal history of other infectious and parasitic diseases
 Z86.718	Personal history of other venous thrombosis and embolism
-Z86.73	Personal history of transient ischemic attack (TIA), and cerebral infarction without residual de...	
+Z86.73	Personal history of transient ischemic attack (TIA), and cerebral infarction without residual de...
 Z87.01	Personal history of pneumonia (recurrent)
 Z87.440	Personal history of urinary (tract) infections
 Z87.442	Personal history of urinary calculi
 Z88.0	Allergy status to penicillin
-Z88.1	Allergy status to other antibiotic agents status	
-Z88.8	Personal history of allergy to other specified medicinal agents	
+Z88.1	Allergy status to other antibiotic agents status
+Z88.8	Personal history of allergy to other specified medicinal agents
 Z90.49	Acquired absence of other specified parts of digestive tract
 Z90.710	Acquired absence of both cervix and uterus
 Z91.19	Personal history of noncompliance with medical treatment, presenting hazards to health
 Z91.81	History of falling
 Z95	Presence of cardiac and vascular implants and grafts
 Z96.1	Pseudophakia of both eyes
-Z96.659	Knee joint replacement by other means	
+Z96.659	Knee joint replacement by other means
 Z98.1	Arthrodesis status
 Z98.61	Postsurgical percutaneous transluminal coronary angioplasty status

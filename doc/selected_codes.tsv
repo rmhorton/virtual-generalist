@@ -1,4 +1,3 @@
-code	descriiption
 A04	Other bacterial intestinal infections
 A08.4	Viral gastroenteritis
 A41	Other sepsis
@@ -159,7 +158,6 @@ L50	Urticaria
 L57.0	AK (actinic keratosis)
 L82	Seborrheic keratosis
 L98.9	Skin lesion
-Z79.52	Long term (current) use of systemic steroids
 M06	Other rheumatoid arthritis
 M10	Gout
 M12	Other and unspecified arthropathy
@@ -266,6 +264,7 @@ Z78.0	Asymptomatic menopausal state
 Z79.01	Long term (current) use of anticoagulants
 Z79.02	Long term (current) use of antithrombotics/antiplatelets
 Z79.4	Long term (current) use of insulin
+Z79.52	Long term (current) use of systemic steroids
 Z79.82	Long term (current) use of aspirin
 Z79.84	Long term (current) use of oral hypoglycemic drugs
 Z79.891	Long term (current) use of opiate analgesic
@@ -291,3 +290,4 @@ Z96.1	Pseudophakia of both eyes
 Z96.659	Knee joint replacement by other means
 Z98.1	Arthrodesis status
 Z98.61	Postsurgical percutaneous transluminal coronary angioplasty status
+code	descriiption

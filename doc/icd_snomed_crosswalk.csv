@@ -1,4 +1,4 @@
-CURRENT_ICD10_LIST	SNOMED_CONCEPT_NAME	SNOMED_CONCEPT_ID	CURATE_METHOD
+CURRENT_ICD10_LIST,SNOMED_CONCEPT_NAME,SNOMED_CONCEPT_ID,CURATE_METHOD
 J32.9,B97.89,Viral sinusitis (disorder),444814009,Database
 J01.90,Viral sinusitis (disorder),444814009,Database
 Z20.822,Suspected disease caused by Severe acute respiratory coronavirus 2 (situation),840544004,Database

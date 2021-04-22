@@ -1,4 +1,4 @@
-id,icd_code,icd_description,snomed,snomed_concept_name
+set_id,icd_code,icd_description,snomed,snomed_concept_name
 1,T30.0,"Burn of unspecified body region, unspecified degree",48333001,Burn injury(morphologic abnormality
 2,S82.89,Other fractures of lower leg,16114001,Fracture of ankle (disorder)
 3,S82.53,Displaced fracture of medial malleolus of unspecified tibia,16114001,Fracture of ankle (disorder)

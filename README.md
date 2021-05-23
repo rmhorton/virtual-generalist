@@ -1,6 +1,18 @@
 # virtual-generalist
 A complex co-morbidities module for the Synthea patient simulator.
 
+## Contents of this repository
+
+doc/
+	Experiments, medical code taxonomies
+
+paper/
+	text and citations for Synthea competition submission. 
+
+R/
+	Reusable R code 
+
+
 ## Links to Synthea resources
 
 * Github repo for the Synthea patient simulation system:

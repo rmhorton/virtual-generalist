@@ -1,0 +1,79 @@
+@Article{Singliar2006,
+author={{\v{S}}ingliar, T.
+and Hauskrecht, Milos},
+title={Noisy-OR Component Analysis and its Application to Link Analysis},
+journal={Journal of Machine Learning Research},
+year={2006},
+month={Oct},
+day={01},
+volume={7},
+pages={2189-2213}
+}
+
+@article{HalpernSontag2013,
+  author          = {Yonatan Halpern and David Sontag},
+  title           = {Unsupervised Learning of Noisy-Or Bayesian Networks},
+  abstract        = {This paper considers the problem of learning the parameters in Bayesian networks of discrete variables with known structure and hidden variables. Previous approaches in these settings typically use expectation maximization; when the network has high treewidth, the required expectations might be approximated using Monte Carlo or variational methods. We show how to avoid inference altogether during learning by giving a polynomial-time algorithm based on the method-of-moments, building upon recent work on learning discrete-valued mixture models. In particular, we show how to learn the parameters for a family of bipartite noisy-or Bayesian networks. In our experimental results, we demonstrate an application of our algorithm to learning QMR-DT, a large Bayesian network used for medical diagnosis. We show that it is possible to fully learn the parameters of QMR-DT even when only the findings are observed in the training data (ground truth diseases unknown).},
+  journal         = {Appears in Proceedings of the Twenty-Ninth Conference on Uncertainty in Artificial Intelligence (UAI2013)},
+  keywords        = {Machine Learning (cs.LG); Machine Learning (stat.ML)},
+  Eprint          = {arXiv:1309.6834  [cs.LG]},
+  volume          = {2013},
+  month           = {August},
+  day             = {11-15},
+  year            = {2013},
+  editor          = {Ann Nicholson and Padhraic Smyth},
+  note            = {Proceedings of the Twenty-Ninth Conference on Uncertainty in Artificial Intelligence, UAI 2013, Bellevue, WA, USA, August 11-15, 2013. AUAI Press 2013}
+}
+
+@Article{Jernite2013,
+author={Jernite, Y.
+and Halpern, Y.
+and Sontag, D.},
+title={Discovering hidden variables in noisy-or networks using quartet tests},
+journal={Advances in Neural Information Processing Systems},
+year={2013},
+month={Jan},
+day={01}
+}
+
+@Article{Halpern2014,
+author={Halpern, Yoni
+and Choi, Youngduck
+and Horng, Steven
+and Sontag, David},
+title={Using Anchors to Estimate Clinical State without Labeled Data},
+journal={AMIA ... Annual Symposium proceedings. AMIA Symposium},
+year={2014},
+month={Nov},
+day={14},
+publisher={American Medical Informatics Association},
+volume={2014},
+pages={606-615},
+keywords={Decision Support Techniques; *Electronic Health Records; Humans; Models, Theoretical; *User-Computer Interface; Vocabulary, Controlled},
+abstract={We present a novel framework for learning to estimate and predict clinical state variables without labeled data. The resulting models can used for electronic phenotyping, triggering clinical decision support, and cohort selection. The framework relies on key observations which we characterize and term "anchor variables". By specifying anchor variables, an expert encodes a certain amount of domain knowledge about the problem while the rest of learning proceeds in an unsupervised manner. The ability to build anchors upon standardized ontologies and the framework's ability to learn from unlabeled data promote generalizability across institutions. We additionally develop a user interface to enable experts to choose anchor variables in an informed manner. The framework is applied to electronic medical record-based phenotyping to enable real-time decision support in the emergency department. We validate the learned models using a prospectively gathered set of gold-standard responses from emergency physicians for nine clinically relevant variables.},
+note={25954366[pmid]},
+note={PMC4419996[pmcid]},
+issn={1942-597X},
+url={https://pubmed.ncbi.nlm.nih.gov/25954366},
+language={eng}
+}
+
+@Article{Rotmensch2017,
+author={Rotmensch, Maya
+and Halpern, Yoni
+and Tlimat, Abdulhakim
+and Horng, Steven
+and Sontag, David},
+title={Learning a Health Knowledge Graph from Electronic Medical Records},
+journal={Scientific Reports},
+year={2017},
+month={Jul},
+day={20},
+volume={7},
+number={1},
+pages={5994},
+abstract={Demand for clinical decision support systems in medicine and self-diagnostic symptom checkers has substantially increased in recent years. Existing platforms rely on knowledge bases manually compiled through a labor-intensive process or automatically derived using simple pairwise statistics. This study explored an automated process to learn high quality knowledge bases linking diseases and symptoms directly from electronic medical records. Medical concepts were extracted from 273,174 de-identified patient records and maximum likelihood estimation of three probabilistic models was used to automatically construct knowledge graphs: logistic regression, naive Bayes classifier and a Bayesian network using noisy OR gates. A graph of disease-symptom relationships was elicited from the learned parameters and the constructed knowledge graphs were evaluated and validated, with permission, against Google's manually-constructed knowledge graph and against expert physician opinions. Our study shows that direct and automated construction of high quality health knowledge graphs from medical records using rudimentary concept extraction is feasible. The noisy OR model produces a high quality knowledge graph reaching precision of 0.85 for a recall of 0.6 in the clinical evaluation. Noisy OR significantly outperforms all tested models across evaluation frameworks (p{\thinspace}<{\thinspace}0.01).},
+issn={2045-2322},
+doi={10.1038/s41598-017-05778-z},
+url={https://doi.org/10.1038/s41598-017-05778-z}
+}

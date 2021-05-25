@@ -6,6 +6,9 @@ A complex co-morbidities module for the Synthea patient simulator.
 doc/
 	Experiments, medical code taxonomies
 
+eval/
+        evaluation of the synthea versus patient comorbidities
+
 paper/
 	text and citations for Synthea competition submission. 
 

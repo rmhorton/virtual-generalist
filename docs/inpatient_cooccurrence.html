@@ -10,29 +10,36 @@
 		<body>
 			<div class="slidercontainer">
 				<label>minimum edge strength:
-					<input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="min_edge_weight" 
-							onchange="document.getElementById('min_edge_weight_display').value=this.value;">
-					<input type="text" id="min_edge_weight_display" size="2" value="0.5">
+					<input type="range" min="0" max="1" value="0.5" step="0.01" class="slider" id="min_edge_weight">
+					<input type="text" id="min_edge_weight_display" size="2">
+					Metric: <span id="edge_weight_metric" />
 				</label>
 			</div>
 			<div id="mynetwork"></div>
 			<script type="text/javascript">
+	const max_lift = 2.0392165335652743
 	const urlParams = new URLSearchParams(window.location.search);
-	const weight_param = urlParams.get("weight")
-	const sign_color = {pos:"blue", neg:"red", zero:"black"}                             /* NEW */
-	const edge_weight_metric = (weight_param === null) ? "lift" : weight_param
+	const weight_metric = urlParams.get("metric")==null ? "lift" : urlParams.get("metric")
+	const sign_color = {pos:"blue", neg:"red", zero:"black"}
+	const filter_coef = {"confidence":1, "lift": max_lift, "log2lift": Math.log2(max_lift)}
+	
+	document.getElementById("min_edge_weight_display").value = filter_coef[weight_metric] * 0.5
+	document.getElementById("min_edge_weight").onchange = function(){
+		document.getElementById("min_edge_weight_display").value= filter_coef[weight_metric] * this.value
+	}
+	document.getElementById("edge_weight_metric").innerText = weight_metric
+	
 	for (var i = 0; i < EDGE_LIST.length; i++) {
-		EDGE_LIST[i]["log2lift"] = Math.log2(EDGE_LIST[i]["lift"])                       /* NEW */
-		EDGE_LIST[i]["arrows"] = "to"
-		EDGE_LIST[i]["value"] = Math.abs(EDGE_LIST[i][edge_weight_metric])
-		EDGE_LIST[i]["sign"] = (EDGE_LIST[i][edge_weight_metric] < 0) ? "neg" : "pos";   /* NEW */
-		EDGE_LIST[i]["color"] = {color: sign_color[EDGE_LIST[i]["sign"]] };              /* NEW */
+		EDGE_LIST[i]["log2lift"] = Math.log2(EDGE_LIST[i]["lift"])
+		if (weight_metric=="confidence") EDGE_LIST[i]["arrows"] = "to"
+		EDGE_LIST[i]["value"] = Math.abs(EDGE_LIST[i][weight_metric])
+		EDGE_LIST[i]["sign"] = (EDGE_LIST[i][weight_metric] < 0) ? "neg" : "pos";
+		EDGE_LIST[i]["color"] = {color: sign_color[EDGE_LIST[i]["sign"]] };
 	}
 	
 	const edgeFilterSlider = document.getElementById("min_edge_weight")
 	
-	const filter_coef = {"confidence":1, "lift":2.0392165335652743, "log2lift": 10}           /* NEW */
-	function edgesFilter(edge){return edge.value > edgeFilterSlider.value * filter_coef[edge_weight_metric]}
+	function edgesFilter(edge){return edge.value > edgeFilterSlider.value * filter_coef[weight_metric]}
 	
 	const nodes = new vis.DataSet(NODE_LIST)
 	const edges = new vis.DataSet(EDGE_LIST)

@@ -7,6 +7,11 @@
 * Bayesian networks:
    - [inpatients](https://rmhorton.github.io/virtual-generalist/bayes_net_inpatient.html)
 
+* Co-occurrence graphs:
+   - inpatients
+      + by [confidence](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?weight=confidence)
+      + by [lift](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?weight=lift)
+      + by [log2lift]((https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?weight=log2lift)
 
 ## Notes on Maintaining GitHub Pages
 

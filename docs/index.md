@@ -9,9 +9,9 @@
 
 * Co-occurrence graphs:
    - inpatients
-      + by [confidence](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?weight=confidence)
-      + by [lift](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?weight=lift)
-      + by [log2lift](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?weight=log2lift)
+      + by [confidence](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?metric=confidence)
+      + by [lift](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?metric=lift)
+      + by [log2lift](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?metric=log2lift)
 
 ## Notes on Maintaining GitHub Pages
 

@@ -1,0 +1,984 @@
+
+---
+title: "Bayes Net on core ICD10 codes (20210613) (1)"
+output:
+  html_document:
+    toc: true
+---
+
+
+____________
+%md
+
+Here we train a Bayes Net where the nodes are a set of hand-selected ICD10 codes, along with certain demographic features of the patient. The network is trained from a dataset where the rows represent patient encounters, and the columns represent the values we will use as nodes.
+
+
+
+____________
+%md
+
+## Feature Engineering
+
+Here we select which attributes to include for each encounter. There are two types of attributes: ICD10 codes (from a hand-curated list) and patient demographic characteristics.
+
+To make the ICD10 features, we first create a table in long format, with one row for each ICD10 code for each encounter. This is then pivoted to wide format so the encounters are each represented by one row, and the ICD10 codes are represented by columns of binary flags indicating whether that code appeared in that encounter or not. The wide format ICD table is then joined to a table containing patient demographic features for each encounter, and this table is saved to the database so we can access it from R to train the Bayes Net.
+
+### Conditions to add:
+
+* dementia
+* coronary artery disease ( covered by 'chronic ischemic heart disease' ?)
+* dialysis, which connects to:
+  - metabolic bone disease
+  - chronic anemia
+  - infections
+* major depression
+
+
+____________
+%sql
+
+with dx as (
+  select icd_code, description, 'amb' encounter_type from amb_dx
+  union all
+  select icd_code, description, 'hosp'  encounter_type from hosp_dx
+)
+select dx.icd_code, dx.description, 
+       count(*) tally 
+  from dx 
+--   where hdx.icd_code rlike('F0[123]')
+  where lower(dx.description) rlike('nicotine|smoking') 
+  group by dx.icd_code, dx.description 
+  order by tally desc;
+  
+-- # Dementia: /F0[123]/ F01 Vascular dementia; F02 Dementia in other diseases classified elsewhere; F03 Unspecified dementia; G30 Alzheimer's disease
+-- # coronary artery disease ( covered by 'chronic ischemic heart disease' ?)
+-- # dialysis: Z99.2 Dependence on renal dialysis
+--   - metabolic bone disease: common metabolic bone diseases (MBD) include osteoporosis(M80, M81), rickets/ osteomalacia, flurosis and primary hyperparathyroidism (PHPT)
+--   - chronic anemia: D64.9 Anemia, unspecified; D63.1 Anemia in chronic kidney disease; D50.9 Iron deficiency anemia, unspecified; D62 Acute posthemorrhagic anemia
+--     D60-D64 Aplastic and other anemias and other bone marrow failure syndromes (D60-D64)
+--   - infections
+-- # major depression: 
+--   Z13.31 Encounter for screening for depression; F32 Major depressive disorder, single episode; F33 Major depressive disorder, recurrent
+--   F41.[89] "Depression with anxiety", "Anxiety and depression" <- officially "F41.8 Other specified anxiety disorders" and "F41.9 Anxiety disorder, unspecified"
+
+
+-- F17|E66|E78|I1[0123]|I25|I42|I50|F0[123]|Z99.2|D63.[19]|F3[23]|F41.[89]|M8[01]|D63.1|D64.9|R50
+
+
+____________
+%sql
+
+select hdx.* from hosp_dx hdx join hosp h on h.prim_enc_csn_id=hdx.prim_enc_csn_id
+
+
+
+____________
+%sql
+create or replace temporary view all_dx as 
+  select prim_enc_csn_id encounter_id, icd_code, description from hosp_dx
+  union all
+  select pat_enc_csn_id encounter_id, icd_code, description from amb_dx
+;
+
+select icd_code, description, count(*) tally from all_dx group by icd_code, description order by tally desc
+
+
+____________
+%sql
+
+select * from hosp_dx where lower(description) rlike('ejection')
+
+
+____________
+%sql
+
+-- select pat_id, PRIM_ENC_CSN_ID encounter_id, admit_date start_time, disch_date end_time from hosp
+-- select pat_id, prim_enc_csn_id encounter_id, icd_code, description from hosp_dx 
+
+-- select pat_id, pat_enc_csn_id encounter_id, icd_code, description from amb_dx
+-- select pat_id, pat_enc_csn_id encounter_id, contact_date, bp_systolic, bp_diastolic, bmi from amb
+select pat_id, prim_enc_csn_id encounter_id, icd_code, description 
+  from hosp_dx 
+  where icd_code rlike("F17|E66|E78|I1[0123]|I25|I42|I50|F0[123]|Z99.2|D63.[19]|F3[23]|F41.[89]|M8[01]|D63.1|D64.9|R50")
+limit 10
+
+
+____________
+%md
+
+"__Systolic heart failure__ happens when the left ventricle of your heart can’t contract completely. That means your heart won’t pump forcefully enough to move your blood throughout your body in an efficient way. It’s also called heart failure with reduced ejection fraction (__HFrEF__)."[ref](https://www.healthline.com/health/heart-failure/systolic-vs-diastolic#systolic-diagnosis)
+
+"__Diastolic heart failure__ occurs when your left ventricle can no longer relax between heartbeats because the tissues have become stiff. When your heart can’t fully relax, it won’t fill up again with blood before the next beat. This type is also called heart failure with preserved ejection fraction (__HFpEF__). ... This type of heart failure most often affects older women. It often occurs alongside other types of heart disease and other non-heart conditions such as cancer and lung disease."
+
+
+____________
+%sql
+
+select * from pat_dmgrphc
+
+
+
+____________
+%md
+
+# Stages of Chronic Kidney Disease
+
+What is the relationship between I12 (Hypertensive chronic kidney disease) and N18.x (Chronic kidney disease, stage x)
+
+
+____________
+%sql
+
+select * from hosp
+
+
+```{python}
+
+
+import numpy as np
+import pandas as pd
+import pyspark.sql.functions as fn
+from pyspark.sql.types import *
+from pyspark.sql import Window
+from pyspark.sql.dataframe import DataFrame
+
+if getattr(DataFrame, "transform", None) is None:
+  DataFrame.transform = lambda self,f: f(self)  # 'monkey patching'
+
+  
+def timestamp_to_timeslice(sdf, timestamp_col, timeslice_id_col, time_unit='hour'):
+  """ Convert timestamp column to integer ID representing number of time units since Unix epoch.
+  Args:
+    sdf (Spark dataframe): input dataframe.
+    timestamp_col (str): name of input timestamp column; this will be replaced by a timestamp_id.
+    timeslice_id_col (str): name of the column to be generated
+    time_unit (str): period of time defined by a fixed number of seconds 
+        ('day', 'hour', etc. as defined in `seconds_per` dict in this function)
+  
+  Returns:
+    Spark dataframe with timestamp column replaced by timeslice ID.
+    
+    To do: support months as time_unit:
+    ( year(encounter_date) - 1970 ) * 12 + month(encounter_date) epoch_month
+  """
+  # time_udf = fn.udf(lambda seconds: int(seconds/seconds_per[time_unit]), IntegerType())
+  
+  if time_unit == 'month':
+    return sdf.withColumn(timeslice_id_col, fn.expr(f'( year({timestamp_col}) - 1970 ) * 12 + month({timestamp_col})'))
+  
+  def convert_seconds(num_seconds, time_unit):
+    seconds_per = {'week': 60*60*24*7, 'day': 60*60*24, 'hour':60*60, 'minute':60, 'second':1}
+    result = None
+    try:
+      result = int(num_seconds/seconds_per[time_unit])
+    except:
+      pass
+    
+    return result
+  
+  time_udf = fn.udf(lambda sec: convert_seconds(sec, time_unit), IntegerType())
+  
+  return sdf\
+    .withColumn('posix_timestamp', fn.unix_timestamp(fn.col(timestamp_col)))\
+    .withColumn(timeslice_id_col, time_udf(fn.col('posix_timestamp')))\
+    .drop('posix_timestamp', timestamp_col)
+
+
+def expand_rows(sdf, from_col, to_col, sequence_col_name, *id_cols):
+  """ Expand a range of integers into a set of rows representing all values in the sequence.
+  
+  Args:
+  
+    sdf (spark dataframe): input dataframe
+    from_col (str): name of column specifying beginning integer value of sequence.
+    to_col (str): name of column specifying ending integer value of sequence
+    sequence_col_name (str): name of new column to be generated with sequence values
+    id_col_names (array of str): names of id columns
+  
+  Returns: 
+  
+    spark dataframe with columns specified in `id_col_names` and `sequence_col_name`, with one row per sequence element.
+  
+  Example::
+  
+    range_sdf = spark.createDataFrame(data=[('Ali',3,7), ('Bay',5,10), ('Cal',1,3)], schema = ['name','from','to'])
+    expand_rows(range_sdf, 'from', 'to', 'sequence_id', 'name').show()
+    
+  """
+  
+  arrayify_udf = fn.udf(lambda s1, s2: [i for i in range(s1, s2+1)] if s1 is not None and s2 is not None else [], ArrayType(IntegerType()))
+  
+  id_range_df = sdf.select([ *id_cols, arrayify_udf(fn.col(from_col), fn.col(to_col)).alias('int_range')])
+
+  return id_range_df.select([ *id_cols, fn.explode(fn.col('int_range')).alias(sequence_col_name)])
+
+
+def fill_missing_values_forward(sdf, ordering_col, cols_to_fill, *id_cols):
+  """ Fill missing values by carrying previous values forward.
+  
+  Args:
+    sdf: a Spark DataFrame
+    ordering_col: column by which rows should be sorted
+    cols_to_fill: list of columns where missing values will be filled
+    id_cols: list of columns that collectively form a unique identifier that can be used to partition cases.
+  
+  """
+  lookback_window = Window.partitionBy(*id_cols)\
+                 .orderBy(ordering_col)\
+                 .rowsBetween( Window.unboundedPreceding, 0)
+
+  for ctf in cols_to_fill:
+    filled_col = ctf + "_filled"
+    sdf = sdf.withColumn(filled_col, fn.last(sdf[ctf], ignorenulls=True).over(lookback_window))
+
+  return sdf
+
+____________
+%sql
+
+create or replace temporary view ckd_stage_progression as
+with 
+hosp_ckd as (
+  select hdx.pat_id, hdx.prim_enc_csn_id encounter_id, h.admit_date encounter_date, hdx.icd_code, 'hosp' encounter_type
+    from hosp_dx hdx 
+    join hosp h on hdx.prim_enc_csn_id = h.prim_enc_csn_id
+    where hdx.icd_code in ('N18.1', 'N18.2', 'N18.3', 'N18.4', 'N18.5', 'N18.6')
+),
+amb_ckd as (
+  select dx.pat_id, dx.pat_enc_csn_id encounter_id, enc.contact_date encounter_date, dx.icd_code, 'amb' encounter_type
+    from amb_dx dx 
+    join amb enc on dx.pat_enc_csn_id = enc.pat_enc_csn_id
+    where dx.icd_code in ('N18.1', 'N18.2', 'N18.3', 'N18.4', 'N18.5', 'N18.6')
+),
+ckd_enc1 as (
+  select * from hosp_ckd
+  union all 
+  select * from amb_ckd
+),
+ckd_enc1a as (
+  select *, cast(replace(icd_code, 'N18.', '') as int) ckd_stage
+  from ckd_enc1
+)
+select * from ckd_enc1a;
+
+select * from ckd_stage_progression limit 100;
+
+-- select * from ckd_enc2 order by pat_id, encounter_date
+-- select ckd_stage, count(*) tally from ckd_enc2 group by ckd_stage order by ckd_stage
+
+
+____________
+%sql
+
+select encounter_type, ckd_stage, count(*) tally from ckd_stage_progression group by encounter_type, ckd_stage order by encounter_type, ckd_stage;
+
+
+____________
+%sql
+
+-- ,
+-- ckd_enc2 as (
+--  select pat_id, max(encounter_id) encounter_id, epoch_month, max(ckd_stage) ckd_stage, count(encounter_id) num_encounter_ids 
+--    from ckd_enc1a
+--    group by pat_id, epoch_month
+-- )
+
+
+____________
+%python
+
+sdf = spark.sql("""select * from ckd_stage_progression""")
+
+timeslice_id_col = 'epoch_month_number'
+timestamp_col = 'encounter_date'
+
+# sdf.withColumn(timeslice_id_col, fn.expr(f'( year({timestamp_col}) - 1970 ) * 12 + month({timestamp_col})')).show()
+
+sdf = timestamp_to_timeslice(sdf, timestamp_col, timeslice_id_col, time_unit='month')
+
+# sdf.transform(lambda x: timestamp_to_timeslice(x, timestamp_col, timeslice_id_col, time_unit='month'))
+
+
+____________
+%python
+
+window_spec  = Window.partitionBy("pat_id")
+
+sdf2 = sdf.select(['pat_id', 'encounter_id', 'epoch_month_number', 'ckd_stage'])\
+  .orderBy(['pat_id', 'epoch_month_number'])\
+  .groupBy(['pat_id', 'epoch_month_number'])\
+  .agg(
+    fn.max('ckd_stage').alias('max_ckd_stage'),
+    fn.max('encounter_id').alias('max_encounter_id'),
+  )
+
+sdf2.orderBy(['pat_id', 'epoch_month_number']).show()
+
+
+#   .withColumn("num_encounters", fn.size(fn.collect_list("max_encounter_id").over(window_spec)))\
+#   .filter(fn.col("num_encounters") > 1)\
+
+
+____________
+%python
+
+
+sdf3 = sdf2\
+  .withColumn("next_epoch_month_number", fn.lead(fn.col("epoch_month_number")).over(window_spec.orderBy("epoch_month_number")))\
+  .withColumn("end_epoch_month_number", fn.coalesce(fn.col("next_epoch_month_number") - 1, fn.col(("epoch_month_number"))))
+
+sdf3.show()
+
+# expand_rows(sdf3, 'epoch_month_number', 'end_epoch_month_number', 'max_encounter_id', 'max_ckd_stage')\
+#   .orderBy(['pat_id', 'max_epoch_month_number'])\
+#   .show()
+
+
+____________
+%python
+expand_rows(sdf3, 'epoch_month_number', 'end_epoch_month_number', 'month_number', 'pat_id', 'max_encounter_id', 'max_ckd_stage')\
+  .orderBy(['pat_id', 'month_number'])\
+  .write.mode('overwrite').saveAsTable('patient_monthly_ckd_stage')
+
+
+____________
+%sql
+
+with
+pms as (
+  select pat_id, month_number, max_ckd_stage ckd_stage from patient_monthly_ckd_stage order by pat_id, month_number
+),
+patient_num_months as (
+  select pat_id, count(*) num_months from pms group by pat_id order by num_months desc
+)
+select pms.* from pms join patient_num_months on pms.pat_id==patient_num_months.pat_id where patient_num_months.num_months > 36
+
+
+____________
+%sql
+with
+pat_stat as (
+  select pat_id, max(max_ckd_stage) - min(max_ckd_stage) ckd_stage_range, max(month_number) - min(month_number) month_range
+    from patient_monthly_ckd_stage
+    group by pat_id
+)
+select * from patient_monthly_ckd_stage 
+  where pat_id in (select pat_id from pat_stat where ckd_stage_range > 4)
+  order by pat_id, month_number
+
+-- select * from pat_stat order by ckd_stage_range desc
+-- select * from patient_monthly_ckd_stage order by pat_id, month_number
+
+
+____________
+%md
+# Train Bayes net on monthly CKD stage data
+
+
+____________
+%sql
+
+-- select count(*) from patient_monthly_ckd_stage -- 907693
+
+with 
+patient_stage as (
+  select pat_id, max(max_ckd_stage) top_stage, count(distinct max_ckd_stage) num_stages, count(*) num_months from patient_monthly_ckd_stage group by pat_id
+)
+select count(*) from patient_monthly_ckd_stage pmcs
+  join patient_stage ps on pmcs.pat_id = ps.pat_id
+  where num_months > 40  -- 2: 883316, 8:823810, 20: 563369, 40: 330939
+
+
+-- select top_stage, num_months, count(*) tally from patient_stage group by top_stage, num_months order by top_stage, num_months
+
+-- select top_stage, num_stages, count(*) tally from patient_stage group by top_stage, num_stages order by top_stage, num_stages
+
+-- pat_id, month_number, max_ecounter_id ecounter_id, max_ckd_stage ckd_stage
+
+
+____________
+%r
+
+library(bnlearn)
+library(sparklyr)
+library(DBI)
+library(dplyr)
+
+sc <- spark_connect(method='databricks')
+
+Q <- "with 
+patient_stage as (
+  select pat_id, max(max_ckd_stage) top_stage, count(distinct max_ckd_stage) num_stages, count(*) num_months from patient_monthly_ckd_stage group by pat_id
+)
+select pmcs.pat_id, pmcs.max_ckd_stage ckd_stage, pmcs.month_number from patient_monthly_ckd_stage pmcs
+  join patient_stage ps on pmcs.pat_id = ps.pat_id
+  where num_months >= 12"  # don't get too many rows
+
+stage_data <- dbGetQuery(sc, Q) %>% 
+  group_by(pat_id) %>% arrange(pat_id, month_number) %>%
+    mutate(next_stage = dplyr::lead(ckd_stage, n = 1, default = NA)) %>%
+    ungroup
+
+
+ckd_levels <- paste0('ckd', 1:6)
+stage_nodes <- stage_data %>% 
+  filter(!is.na(next_stage)) %>% 
+  mutate(old_stage=factor(sprintf('ckd%d', ckd_stage), levels=ckd_levels), 
+         new_stage=factor(sprintf('ckd%d', next_stage), levels=ckd_levels)
+        )
+
+
+keepers = c('old_stage', 'new_stage')
+
+my_blacklist <- tiers2blacklist(list(root_nodes='old_stage',
+                                     outcomes='new_stage'))
+
+indata <- as.data.frame(stage_nodes[keepers]) # must be dataframe, not tibble
+stage_dag <- mmhc(indata, blacklist=my_blacklist)
+
+modelstring(stage_dag)
+fit <- bn.fit(stage_dag, indata)
+
+transitions <- fit$new_stage$prob %>% as.matrix %>% t %>% '*'(100)
+
+options(width=200, digits=2)
+
+transitions
+
+
+____________
+%sql
+
+select * from patient_monthly_ckd_stage 
+
+
+____________
+%r
+library(dplyr)
+library(ggplot2)
+
+stage_nodes %>% group_by(pat_id) %>% mutate(num_months=n(), duration=month_number - month_number[1]) %>% ungroup %>% filter(num_months > 120) %>% 
+  ggplot(aes(x=duration, y=as.integer(new_stage), col=pat_id))+ geom_line() + ylab('CKD Stage') + geom_wrap(. ~ pat_id) + theme(legend.position='none')
+# group_by(pat_id) %>% summarize(num_pat_ids = n())
+
+
+____________
+%sql
+
+show tables
+
+
+____________
+%sql
+
+-- show tables  -- flo_vitals flow_meas_id flo_misc
+
+-- select * from flo_vitals where lower(flo_meas_name) rlike('lvef|ejection')
+
+-- select flo_meas_name, count(*) tally from flo_vitals group by flo_meas_name order by tally desc -- 16 things measured
+
+-- select flo_meas_name, count(*) tally from flo_misc group by flo_meas_name order by tally desc  -- 64 rows
+-- SOM IP R ORGAN FAILURE, R APACHE CHRONIC DIALYSIS
+
+-- select * from flo_misc where flo_meas_name == 'SOM IP R ORGAN FAILURE' limit 100  -- MEAS_VALUE yes/no
+
+-- select * from hosp_dx where lower(description) rlike('lvef|fraction') -- 'eject' matches 'rejection', 'fraction' matches 'refreation'
+
+
+-- lab_result  lab_result_bkr
+-- select component_name, ord_value from lab_result where lower(component_name) rlike('lvef|ejection') 
+
+-- select component_name, COMPONENT_VALUE from lab_result_bkr where lower(component_name) rlike('lvef|ejection') 
+
+-- select component_name, count(*) tally from lab_result_bkr group by component_name order by tally desc
+
+-- select flo_meas_name, count(*) tally from lda group by flo_meas_name order by tally desc  -- 4 things
+-- select concept_name, count(*) tally from sde group by concept_name order by tally desc -- 4 things, all related to vaping
+
+
+____________
+%md
+
+# Add more variables
+
+
+____________
+%python
+range_sdf.show()
+
+
+____________
+%r
+library(dplyr)
+library(sparklyr)
+
+sc <- spark_connect(method="databricks")
+
+selected_codes <- read.delim(text="icd_code	description
+F17	Nicotine_dependence
+E11	Type_2_diabetes_mellitus
+E66	Overweight_and_obesity
+I10	Essential_primary_hypertension
+E78	Hyperlipidemia
+I10 Essential (primary) hypertension
+I11	Hypertensive heart disease
+I12	Hypertensive chronic kidney disease
+N18	Chronic_kidney_disease
+I13	Hypertensive heart and chronic kidney disease
+I25	Chronic ischemic heart disease
+I42	Cardiomyopathy
+I50	Heart failure
+R05	Cough
+J44 Chronic obstructive pulmonary disease
+")
+# use BMI instead of E66
+# Dementia
+# coronary artery disease ( covered by 'chronic ischemic heart disease' ?)
+# dialysis -> metabolic bone disease, chronic anemia, infections
+# major depression
+
+F32 Major depressive disorder, single episode
+F33 Major depressive disorder, recurrent
+# Other commmon codes:
+# K21 Gastro-esophageal reflux disease
+# Z87.891 Personal history of nicotine dependence
+# G47.33 Obstructive sleep apnea (adult) (pediatric)
+
+icd10_code_name <- with(selected_codes, setNames(description, nm=icd_code))
+
+# N18.1 Chronic_kidney_disease_stage_1
+# N18.2 Chronic_kidney_disease_stage_2
+# N18.3 Chronic_kidney_disease_stage_3
+# N18.4 Chronic_kidney_disease_stage_4
+# N18.5 Chronic_kidney_disease_stage_5
+# N18.6 End_stage_chronic_kidney_disease
+
+# I13	Hypertensive heart and chronic kidney disease
+# I11 = I11 or I13, I12 = I12 or I13
+
+nrow(selected_codes) # 13
+
+copy_to(sc, selected_codes, overwrite=TRUE) %>% spark_write_table(name='selected_codes', mode='overwrite')
+
+
+____________
+%sql
+select * from selected_codes
+
+
+____________
+%sql
+-- select icd_code, description, count(*) tally from hosp_dx where icd_code rlike('I50') group by icd_code, description order by tally desc
+
+
+____________
+%sql
+
+with
+truncated as (
+  -- select icd_code, regexp_replace(icd_code, '([^.]+\\..).*', "$1") trunc from hosp_dx
+  select icd_code, 
+      case when icd_code rlike('([^.]+\\..).*') then regexp_extract(icd_code, '([^.]+\\..).*', 1) else icd_code end as icd_truncated1,
+      regexp_replace(icd_code, '\\..*', '') icd_prefix
+      from hosp_dx
+)
+select icd_code, icd_truncated1, icd_prefix, count(*) tally from truncated group by icd_code, icd_truncated1, icd_prefix order by tally desc
+
+-- select icd_code, count(*) tally from hosp_dx where icd_code rlike('N18') group by icd_code order by icd_code
+
+-- N18.1 Chronic_kidney_disease_stage_1
+-- N18.2 Chronic_kidney_disease_stage_2
+-- N18.3 Chronic_kidney_disease_stage_3
+-- N18.4 Chronic_kidney_disease_stage_4
+-- N18.5 Chronic_kidney_disease_stage_5
+-- N18.6 End_stage_chronic_kidney_disease
+
+
+____________
+%python
+import pandas as pd
+import numpy as np
+import datetime
+import time
+import pyspark.sql.functions as fn
+from pyspark.sql.types import *
+from pyspark.sql import Window
+from sklearn.externals import joblib
+
+
+____________
+%sql
+select * from selected_codes
+
+
+____________
+%sql
+
+select * from hosp_dx order by prim_enc_csn_id
+
+
+
+____________
+%sql
+
+
+-- selected_codes.icd10_code could be a section rather than a specific ICD10 code
+create or replace temporary view encounter_icd_long as
+with
+enc_dx_all as (
+  select hosp_dx.*
+    from hosp_dx join hosp on hosp_dx.pat_id = hosp.pat_id
+    where hosp_dx.prim_enc_csn_id = hosp.prim_enc_csn_id 
+    and pat_class_name='Inpatient'
+    and year(hosp.admit_date) > 2015
+),
+icd10 as (
+  select pat_id, 
+    prim_enc_csn_id encounter_id,
+    icd_code, 
+    regexp_extract(icd_code, '^([^.]+)', 1) icd_section, 
+    regexp_extract(icd_code, '(.).*', 1) icd_letter,
+    description
+    from enc_dx_all 
+      where code_type = 'ICD10' 
+      and icd_code not in ('IMO0002', 'IMO0001')
+),
+enc_node as (
+--   select icd10.pat_id, icd10.encounter_id, selected_codes.icd_code node
+--     from icd10 
+--     join selected_codes 
+--       on icd10.icd_code = selected_codes.icd_code
+--   union
+  select icd10.pat_id, icd10.encounter_id, selected_codes.icd_code node
+    from icd10 
+    join selected_codes
+      on icd10.icd_section = selected_codes.icd_code
+)
+select * from enc_node;
+
+select * from encounter_icd_long;
+
+-- select node, count(*) tally 
+--   from encounter_node 
+--   group by node 
+--   order by tally desc limit 300
+
+
+____________
+%sql
+
+create or replace temporary view encounter_demographic as
+  with
+  enc_dmgrphc as (
+    select h.prim_enc_csn_id enc_id, 
+        p.gender, p.ethncty, p.race,
+        floor(datediff(h.admit_date, p.birth_date)/365.24) age_years,
+        case 
+          when 
+            (p.covid_status_date > h.admit_date - interval 14 days) 
+            and (p.covid_status_date < h.disch_date + interval 7 days) 
+            then 'COVID_Y' 
+          else 'COVID_N' 
+        end COVID19_POS
+      from hosp h
+      join pat_dmgrphc p
+      on h.pat_id = p.pat_id
+  ),
+  enc_dmgrphc2 as (
+    select *,
+        case
+          when age_years between 0 and 1 then 'age_00_01'
+          when age_years between 2 and 8 then 'age_02_08'
+          when age_years between 9 and 17 then 'age_09_17'
+          when age_years between 18 and 24 then 'age_18_24'
+          when age_years between 25 and 44 then 'age_25_44'
+          when age_years between 45 and 64 then 'age_45_64'
+          when age_years between 65 and 74 then 'age_65_74'
+          when age_years >=75 then 'age_75_plus'
+        end age_category
+        from enc_dmgrphc
+        where age_years >= 50
+  )
+  select * from enc_dmgrphc2;
+  
+select * from encounter_demographic;
+
+
+____________
+%python
+encounter_demographic = spark.sql("select * from encounter_demographic")
+
+
+____________
+%python
+encounter_icd_long = spark.sql("select encounter_id, replace(node, '.', '_') node from encounter_icd_long") #  Does not like periods: 'A08.4' 'D12.6' 'D72.829'
+
+eiw = ( encounter_icd_long
+         .withColumn('mark', fn.lit(1))
+         .groupby('encounter_id')
+         .pivot('node')
+         .agg(fn.sum('mark'))
+        )
+
+for icd_col in eiw.columns[1:]:
+  eiw = eiw.withColumn(icd_col, fn.when(fn.col(icd_col).isNotNull(),1).otherwise(0))
+ 
+# eiw.show(10)
+# enw.createOrReplaceTempView('encounter_icd_wide')
+
+
+____________
+%python
+enc_dmgrphc_icd = encounter_demographic.join(eiw, encounter_demographic.enc_id == eiw.encounter_id).drop('encounter_id').drop('enc_id')
+
+# enc_dmgrphc_icd.createOrReplaceTempView('enc_demographic_icd_wide')
+
+enc_dmgrphc_icd.write.mode('overwrite').saveAsTable('enc_demographic_icd_wide')
+
+
+____________
+%sql
+
+select * from enc_demographic_icd_wide limit 100000  -- 211557 rows
+
+
+
+____________
+%md
+
+## Train the Bayes Net
+
+
+____________
+%r
+
+library(bnlearn)
+library(sparklyr)
+library(DBI)
+library(dplyr)
+
+SAMPLE_SIZE <- 100000
+
+sc <- spark_connect(method='databricks')
+
+root_nodes <- c('gender', 'ethncty', 'race', 'age_category', 'F17', 'E11', 'E66', 'I10', 'E78')
+outcomes <- c('I11', 'I12', 'I25', 'I42', 'I50', 'R05', 'N18')
+
+drop_cols = c('enc_id', 'age_years', 'COVID19_POS')
+
+Q <- sprintf("select * from enc_demographic_icd_wide limit %d", SAMPLE_SIZE)
+
+cw <- dbGetQuery(sc, Q) %>%
+  mutate(I11 = as.integer(I11|I13), I12 = as.integer(I12|I13)) %>%
+  select(-I13)
+
+
+
+____________
+%r
+# colMeans(cw[7:17]) # I11: 0.14336 -> 0.33935, I12: 0.17921->0.37458
+
+names(cw)
+
+
+____________
+%r
+
+keepers <- setdiff(names(cw), drop_cols)
+
+other_nodes <- setdiff(keepers, root_nodes)
+
+col_classes <- sapply(cw, class)
+integer_cols <- names(cw)[col_classes == "integer"]
+
+for (ic in integer_cols)
+  cw[[ic]] <- ifelse(cw[[ic]], 'T', 'F')
+
+for (col in names(cw)){
+  unk <- if (col == "race") "Unknown/Refused" else "Unknown"
+  cw[[col]][is.na(cw[[col]])] <- unk
+}
+
+for (k in names(cw))
+  cw[[k]] <- factor(cw[[k]])
+
+for (rn in root_nodes){
+  print(rn)
+  print(levels(cw[[rn]]))
+}
+
+
+____________
+%r
+
+icd10_code_name = with(selected_codes, setNames(description %>% gsub(' ', '_', .), nm=icd_code))
+
+icd10_code_name
+
+
+____________
+%r
+
+col_unique_counts <- sapply(cw, function(v) length(unique(v)))
+constant_cols <- names(col_unique_counts)[col_unique_counts < 2]
+
+keepers2 <- setdiff(keepers, constant_cols)
+                            
+outcomes <- c('I11', 'I12', 'I25', 'I42', 'I50', 'R05', 'N18')
+# other_nodes2 <- setdiff(keepers2, c(root_nodes, outcomes))
+
+my_blacklist <- tiers2blacklist(list(root_nodes=root_nodes, # other_nodes=other_nodes2, 
+                                     outcomes=outcomes))
+
+dag_mmhc <- mmhc(cw[keepers2], blacklist=my_blacklist)
+
+
+
+____________
+%r
+
+modelstring(dag_mmhc)
+
+
+____________
+%r
+
+fit <- bn.fit(dag_mmhc, cw[keepers2])
+
+
+____________
+%r
+names(fit)
+
+plot(dag_mmhc)
+
+
+____________
+%r
+library(tidyr)
+# str(fit)
+# fit$gender$prob
+N18_table <- ftable(fit$N18$prob) %>% as.data.frame %>% pivot_wider(names_from="N18", values_from="Freq", names_prefix = "N18_")
+
+N18_table
+
+
+____________
+%r
+attr = 'I25'
+fit[[all_of(attr)]]$prob %>% ftable %>% as.data.frame %>% pivot_wider(names_from=attr, values_from="Freq", names_prefix=attr)
+
+
+
+____________
+%r
+
+edge_weights_mmhc <- arc.strength(dag_mmhc, cw[keepers2])
+
+edge_weights_mmhc
+
+
+____________
+%r
+sdf_copy_to(sc, edge_weights_mmhc, overwrite=TRUE) %>% spark_write_table("edge_weights_mmhc", mode="overwrite")
+
+
+____________
+%r
+
+dag_mmhc$arcs
+
+
+
+____________
+%sql
+
+select * from edge_weights_mmhc order by strength -- formerly 331 rows, now 20
+
+
+____________
+%sql
+
+select * from edge_weights_mmhc
+
+
+____________
+
+
+
+____________
+my_data <- read.csv(text="name,data,text
+Ali,0.000,'Call me Ali'
+Bob,0.111,'Hi, my name is Bob'
+cal,2.111,'I am Cal'
+", quote="'", header=TRUE)
+
+
+
+
+module_framework <- function(input){
+  
+template <- "## This is section %s
+Section data is `%0.2f`.
+Additional section text is: %s.
+
+"
+
+  for (i in seq(nrow(input))) {
+    current <- input[i, ]
+    cat(sprintf(template, current$name, current$data, current$text))
+  }
+  
+  
+}
+
+module_framework(my_data)
+
+
+____________
+%r
+
+state_array <- c(
+  "Initial"= c(
+    "name"= "Initial",
+    "type"= "Initial",
+    "direct_transition"= "Terminal"
+  ),
+  "Terminal"= c(
+    "name"= "Terminal",
+    "type"= "Terminal"
+  )
+)
+
+module <- c(
+  "name"= "Untitled",
+  "remarks"= c(
+    "A blank module"
+  ),
+  "states"= state_array,
+  "gmf_version"= 2
+)
+
+module
+
+
+____________
+%r
+
+library(jsonlite)
+
+cat(toJSON(module)) #, dataframe='rows'
+
+
+____________
+%r
+?toJSON
+
+
+____________
+
+
+
+2
+
+

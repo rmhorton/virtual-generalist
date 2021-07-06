@@ -1,0 +1,569 @@
+icd_set_id,snomed_concept_id,snomed_concept_name,icd_code,icd_description
+1198,449868002,Smokes tobacco daily (finding),F17,Nicotine dependence
+26,431855005,Chronic kidney disease stage 1 (disorder),N18.1,"Chronic kidney disease, stage 1"
+27,431856006,Chronic kidney disease stage 2 (disorder),N18.2,"Chronic kidney disease, stage 2 (mild)"
+28,433144002,Chronic kidney disease stage 3 (disorder),N18.3,"Chronic kidney disease, stage 3 (moderate)"
+29,431857002,Chronic kidney disease stage 4 (disorder),N18.4,"Chronic kidney disease, stage 4 (severe)"
+446,46177005,End stage renal disease (disorder),N18.5,"Chronic kidney disease, stage 5"
+447,46177005,End stage renal disease (disorder),N18.6,End stage renal disease
+337,265764009,Renal dialysis (procedure),N18.6,End stage renal disease
+338,265764009,Renal dialysis (procedure),N18.5,"Chronic kidney disease, stage 5"
+9901,709044004,Chronic kidney disease (disorder),E11.22,Type 2 diabetes mellitus with diabetic chronic kidney disease
+9902,709044004,Chronic kidney disease (disorder),N18,Chronic kidney disease (CKD)
+9903,709044004,Chronic kidney disease (disorder),E09.22,Drug or chemical induced diabetes mellitus with diabetic chronic kidney disease
+9904,709044004,Chronic kidney disease (disorder),E08.22,Diabetes mellitus due to underlying condition with diabetic chronic kidney disease
+9905,709044004,Chronic kidney disease (disorder),I13.10,"Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+9906,709044004,Chronic kidney disease (disorder),D63.1,Anemia in chronic kidney disease
+9907,709044004,Chronic kidney disease (disorder),I13.0,"Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+9908,709044004,Chronic kidney disease (disorder),E10.22,Type 1 diabetes mellitus with diabetic chronic kidney disease
+9909,709044004,Chronic kidney disease (disorder),I12,Hypertensive chronic kidney disease
+9910,709044004,Chronic kidney disease (disorder),N03.9,Chronic nephritic syndrome with unspecified morphologic changes
+9911,709044004,Chronic kidney disease (disorder),E13.22,Other specified diabetes mellitus with diabetic chronic kidney disease
+9912,709044004,Chronic kidney disease (disorder),Z99.2,Dependence on renal dialysis
+23,709044004,Chronic kidney disease (disorder),E11.22,Type 2 diabetes mellitus with diabetic chronic kidney disease
+1324,301011002,Escherichia coli urinary tract infection (disorder),B96.29,Other Escherichia coli [E. coli] as the cause of diseases classified elsewhere
+1324,301011002,Escherichia coli urinary tract infection (disorder),N39.0,"Urinary tract infection, site not specified"
+262,65710008,Acute respiratory failure (disorder),R65.21,Severe sepsis with septic shock
+262,65710008,Acute respiratory failure (disorder),J96.90,"Respiratory failure, unspecified, unspecified whether with hypoxia or hypercapnia"
+357,110359009,Intellectual disability (disorder),F72,Severe intellectual disabilities
+568,302226006,Peripheral nerve disease (disorder),G60.0,Hereditary motor and sensory neuropathy
+798,1121000119107,Chronic neck pain (finding),M54.2,Cervicalgia
+798,1121000119107,Chronic neck pain (finding),G89.28,Other chronic postprocedural pain
+1007,278860009,Chronic low back pain (finding),G89.29,Other chronic pain
+1007,278860009,Chronic low back pain (finding),M54.4,Lumbago with sciatica
+1038,93761005,Primary malignant neoplasm of colon (disorder),C18.8,Malignant neoplasm of overlapping sites of colon
+1038,93761005,Primary malignant neoplasm of colon (disorder),C77.2,Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes
+1071,10509002,Acute bronchitis (disorder),J20.8,Acute bronchitis due to other specified organisms
+111,76571007,Septic shock (disorder),I95.9,"Hypotension, unspecified"
+111,76571007,Septic shock (disorder),A41.9,"Sepsis, unspecified organism"
+1166,195951007,Acute exacerbation of chronic obstructive airways disease (disorder),J44.9,"Chronic obstructive pulmonary disease, unspecified"
+1166,195951007,Acute exacerbation of chronic obstructive airways disease (disorder),R06.03,Acute respiratory distress
+1200,444814009,Viral sinusitis (disorder),J32.9,"Chronic sinusitis, unspecified"
+1200,444814009,Viral sinusitis (disorder),B97.89,Other viral agents as the cause of diseases classified elsewhere
+1245,389086002,Hypoxia (disorder),J96.11,Chronic respiratory failure with hypoxia
+1262,232353008,Perennial allergic rhinitis with seasonal variation (disorder),J30.89,Other allergic rhinitis
+1323,301011002,Escherichia coli urinary tract infection (disorder),B96.20,Unspecified Escherichia coli [E. coli] as the cause of diseases classified elsewhere
+1323,301011002,Escherichia coli urinary tract infection (disorder),N39.0,"Urinary tract infection, site not specified"
+1349,770349000,Sepsis caused by virus (disorder),B97.89,Other viral agents as the cause of diseases classified elsewhere
+1349,770349000,Sepsis caused by virus (disorder),A41.89,Other specified sepsis
+261,65710008,Acute respiratory failure (disorder),G70.9,"Myoneural disorder, unspecified"
+261,65710008,Acute respiratory failure (disorder),J96.90,"Respiratory failure, unspecified, unspecified whether with hypoxia or hypercapnia"
+347,389087006,Hypoxemia (disorder),G47.36,Sleep related hypoventilation in conditions classified elsewhere
+347,389087006,Hypoxemia (disorder),I27.29,Other secondary pulmonary hypertension
+348,389087006,Hypoxemia (disorder),E66.9,"Obesity, unspecified"
+348,389087006,Hypoxemia (disorder),G47.36,Sleep related hypoventilation in conditions classified elsewhere
+349,389087006,Hypoxemia (disorder),J44.9,"Chronic obstructive pulmonary disease, unspecified"
+349,389087006,Hypoxemia (disorder),G47.36,Sleep related hypoventilation in conditions classified elsewhere
+350,389087006,Hypoxemia (disorder),J43.9,"Emphysema, unspecified"
+438,69896004,Rheumatoid arthritis (disorder),M79.0,"Rheumatism, unspecified"
+438,69896004,Rheumatoid arthritis (disorder),R23.9,Unspecified skin changes
+507,91302008,Sepsis (disorder),A41.81,Sepsis due to Enterococcus
+567,302226006,Peripheral nerve disease (disorder),G51.0,Bell's palsy
+580,400047006,Peripheral vascular disease (disorder),E10.59,Type 1 diabetes mellitus with other circulatory complications
+580,400047006,Peripheral vascular disease (disorder),N52.1,Erectile dysfunction due to diseases classified elsewhere
+661,22253000,Pain (finding),F41.1,Generalized anxiety disorder
+661,22253000,Pain (finding),F45.42,Pain disorder with related psychological factors
+663,22253000,Pain (finding),M79.67,Pain in foot and toes
+797,1121000119107,Chronic neck pain (finding),M54.2,Cervicalgia
+899,75498004,Acute bacterial sinusitis (disorder),B96.89,Other specified bacterial agents as the cause of diseases classified elsewhere
+899,75498004,Acute bacterial sinusitis (disorder),J01.90,"Acute sinusitis, unspecified"
+1067,10509002,Acute bronchitis (disorder),J44.0,Chronic obstructive pulmonary disease with (acute) lower respiratory infection
+1068,10509002,Acute bronchitis (disorder),J45.90,Unspecified asthma
+1069,10509002,Acute bronchitis (disorder),J45.21,Mild intermittent asthma with (acute) exacerbation
+1070,10509002,Acute bronchitis (disorder),J20,Acute bronchitis
+585,59621000,Hypertension,I10,Essential (primary) hypertension
+586,59621000,Hypertension,O13.1,"Gestational [pregnancy-induced] hypertension without significant proteinuria, first trimester"
+588,59621000,Hypertension,O13.2,"Gestational [pregnancy-induced] hypertension without significant proteinuria, second trimester"
+582,59621000,Hypertension,O13.3,"Gestational [pregnancy-induced] hypertension without significant proteinuria, third trimester"
+587,59621000,Hypertension,I12.9,"Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+583,59621000,Hypertension,O13.9,"Gestational [pregnancy-induced] hypertension without significant proteinuria, unspecified trimester"
+584,59621000,Hypertension,I11.0,Hypertensive heart disease with heart failure
+590,59621000,Hypertension,I12.0,Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease
+1306,109838007,Overlapping malignant neoplasm of colon (disorder),C18.8,Malignant neoplasm of overlapping sites of colon
+354,110359009,Intellectual disability (disorder),F79,Unspecified intellectual disabilities
+355,110359009,Intellectual disability (disorder),G31.84,"Mild cognitive impairment, so stated"
+356,110359009,Intellectual disability (disorder),Q87.89,"Other specified congenital malformation syndromes, not elsewhere classified"
+351,110359009,Intellectual disability (disorder),F84.0,Autistic disorder
+352,110359009,Intellectual disability (disorder),Q87.19,Other congenital malformation syndromes predominantly associated with short stature
+353,110359009,Intellectual disability (disorder),F78,Other intellectual disabilities
+1159,124171000119105,Chronic intractable migraine without aura (disorder),G43.71,"Chronic migraine without aura, intractable"
+135,128188000,Cerebral palsy (disorder),G80,Cerebral palsy
+410,128613002,Seizure disorder (disorder),R56.9,Unspecified convulsions
+408,128613002,Seizure disorder (disorder),G40.89,Other seizures
+409,128613002,Seizure disorder (disorder),G40.90,"Epilepsy, unspecified, not intractable"
+413,128613002,Seizure disorder (disorder),G40.30,"Generalized idiopathic epilepsy and epileptic syndromes, not intractable"
+412,128613002,Seizure disorder (disorder),G40.91,"Epilepsy, unspecified, intractable"
+414,128613002,Seizure disorder (disorder),P90,Convulsions of newborn
+777,132281000119108,Acute deep venous thrombosis (disorder),I82.90,Acute embolism and thrombosis of unspecified vein
+778,132281000119108,Acute deep venous thrombosis (disorder),I82.C11,Acute embolism and thrombosis of right internal jugular vein
+779,132281000119108,Acute deep venous thrombosis (disorder),I82.C13,"Acute embolism and thrombosis of internal jugular vein, bilateral"
+780,132281000119108,Acute deep venous thrombosis (disorder),I82.42,Acute embolism and thrombosis of iliac vein
+773,132281000119108,Acute deep venous thrombosis (disorder),I82.40,Acute embolism and thrombosis of unspecified deep veins of lower extremity
+781,132281000119108,Acute deep venous thrombosis (disorder),I82.B11,Acute embolism and thrombosis of right subclavian vein
+782,132281000119108,Acute deep venous thrombosis (disorder),I82.B13,"Acute embolism and thrombosis of subclavian vein, bilateral"
+772,132281000119108,Acute deep venous thrombosis (disorder),I82.C12,Acute embolism and thrombosis of left internal jugular vein
+775,132281000119108,Acute deep venous thrombosis (disorder),I82.B12,Acute embolism and thrombosis of left subclavian vein
+774,132281000119108,Acute deep venous thrombosis (disorder),I82.B19,Acute embolism and thrombosis of unspecified subclavian vein
+776,132281000119108,Acute deep venous thrombosis (disorder),I82.C19,Acute embolism and thrombosis of unspecified internal jugular vein
+395,13644009,Hypercholesterolemia (disorder),E78.0,Pure hypercholesterolemia
+295,1551000119108,Nonproliferative retinopathy due to type 2 diabetes mellitus (disorder),E11.65,Type 2 diabetes mellitus with hyperglycemia
+296,1551000119108,Nonproliferative retinopathy due to type 2 diabetes mellitus (disorder),Z79.4,Long term (current) use of insulin
+1064,16932000,Nausea and vomiting (disorder),K92.0,Hematemesis
+1065,16932000,Nausea and vomiting (disorder),O21.9,"Vomiting of pregnancy, unspecified"
+1062,16932000,Nausea and vomiting (disorder),R11,Nausea and vomiting
+1063,16932000,Nausea and vomiting (disorder),F50.2,Bulimia nervosa
+1194,185086009,Chronic obstructive bronchitis (disorder),J44,Other chronic obstructive pulmonary disease
+1153,19169002,Miscarriage in first trimester (disorder),O02.1,Missed abortion
+1154,19169002,Miscarriage in first trimester (disorder),O03.9,Complete or unspecified spontaneous abortion without complication
+1299,192127007,Child attention deficit disorder (disorder),F90.9,"Attention-deficit hyperactivity disorder, unspecified type"
+1219,195662009,Acute viral pharyngitis (disorder),B08.8,Other specified viral infections characterized by skin and mucous membrane lesions
+1220,195662009,Acute viral pharyngitis (disorder),B08.5,Enteroviral vesicular pharyngitis
+1221,195662009,Acute viral pharyngitis (disorder),J02.9,"Acute pharyngitis, unspecified"
+1165,195951007,Acute exacerbation of chronic obstructive airways disease (disorder),J43.9,"Emphysema, unspecified"
+1164,195951007,Acute exacerbation of chronic obstructive airways disease (disorder),J44.1,Chronic obstructive pulmonary disease with (acute) exacerbation
+914,195967001,Asthma (disorder),J82.83,Eosinophilic asthma
+915,195967001,Asthma (disorder),J45,Asthma
+1224,197927001,Recurrent urinary tract infection (disorder),O23.42,"Unspecified infection of urinary tract in pregnancy, second trimester"
+1225,197927001,Recurrent urinary tract infection (disorder),N39.0,"Urinary tract infection, site not specified"
+1226,197927001,Recurrent urinary tract infection (disorder),O23.41,"Unspecified infection of urinary tract in pregnancy, first trimester"
+1228,197927001,Recurrent urinary tract infection (disorder),O23.43,"Unspecified infection of urinary tract in pregnancy, third trimester"
+1227,197927001,Recurrent urinary tract infection (disorder),O23.40,"Unspecified infection of urinary tract in pregnancy, unspecified trimester"
+419,198992004,Eclampsia in pregnancy (disorder),O15.0,Eclampsia complicating pregnancy
+1301,203082005,Fibromyalgia (disorder),M79.7,Fibromyalgia
+638,22253000,Pain (finding),M25.51,Pain in shoulder
+637,22253000,Pain (finding),R07.2,Precordial pain
+639,22253000,Pain (finding),H57.10,"Ocular pain, unspecified eye"
+641,22253000,Pain (finding),H92.03,"Otalgia, bilateral"
+642,22253000,Pain (finding),R07.1,Chest pain on breathing
+644,22253000,Pain (finding),K13.0,Diseases of lips
+647,22253000,Pain (finding),D57.41,"Sickle-cell thalassemia, unspecified, with crisis"
+645,22253000,Pain (finding),N94.89,Other specified conditions associated with female genital organs and menstrual cycle
+646,22253000,Pain (finding),R52,"Pain, unspecified"
+648,22253000,Pain (finding),D57.21,Sickle-cell/Hb-C disease with crisis
+649,22253000,Pain (finding),K94.19,Other complications of enterostomy
+650,22253000,Pain (finding),D57.00,"Hb-SS disease with crisis, unspecified"
+651,22253000,Pain (finding),H57.11,"Ocular pain, right eye"
+652,22253000,Pain (finding),G95.9,"Disease of spinal cord, unspecified"
+654,22253000,Pain (finding),L02.91,"Cutaneous abscess, unspecified"
+653,22253000,Pain (finding),K11.8,Other diseases of salivary glands
+655,22253000,Pain (finding),N20.0,Calculus of kidney
+656,22253000,Pain (finding),H57.12,"Ocular pain, left eye"
+657,22253000,Pain (finding),I21.9,"Acute myocardial infarction, unspecified"
+658,22253000,Pain (finding),L98.9,"Disorder of the skin and subcutaneous tissue, unspecified"
+659,22253000,Pain (finding),G89,"Pain, not elsewhere classified"
+633,22253000,Pain (finding),M79.60,"Pain in limb, unspecified"
+634,22253000,Pain (finding),I83.81,Varicose veins of lower extremities with pain
+635,22253000,Pain (finding),R07.0,Pain in throat
+636,22253000,Pain (finding),H57.13,"Ocular pain, bilateral"
+873,22298006,Myocardial infarction (disorder),I21.4,Non-ST elevation (NSTEMI) myocardial infarction
+867,22298006,Myocardial infarction (disorder),I21,Acute myocardial infarction
+868,22298006,Myocardial infarction (disorder),I22,Subsequent ST elevation (STEMI) and non-ST elevation (NSTEMI) myocardial infarction
+1218,230265002,Familial Alzheimer's disease of early onset (disorder),G30.0,Alzheimer's disease with early onset
+618,230690007,Cerebrovascular accident (disorder),I69,Sequelae of cerebrovascular disease
+605,230690007,Cerebrovascular accident (disorder),I63,Cerebral infarction
+606,230690007,Cerebrovascular accident (disorder),I97.81,Intraoperative cerebrovascular infarction
+629,230690007,Cerebrovascular accident (disorder),Z86.73,"Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits"
+607,230690007,Cerebrovascular accident (disorder),I61,Nontraumatic intracerebral hemorrhage
+608,230690007,Cerebrovascular accident (disorder),I60,Nontraumatic subarachnoid hemorrhage
+865,232717009,Coronary artery bypass grafting (procedure),Z95.1,Presence of aortocoronary bypass graft
+956,233604007,Pneumonia (disorder),J18.0,"Bronchopneumonia, unspecified organism"
+957,233604007,Pneumonia (disorder),J17,Pneumonia in diseases classified elsewhere
+958,233604007,Pneumonia (disorder),J82.89,"Other pulmonary eosinophilia, not elsewhere classified"
+954,233604007,Pneumonia (disorder),J18.9,"Pneumonia, unspecified organism"
+385,235595009,Gastroesophageal reflux disease (disorder),P78.83,Newborn esophageal reflux
+384,235595009,Gastroesophageal reflux disease (disorder),K21,Gastro-esophageal reflux disease
+946,235919008,Gallbladder calculus (disorder),K91.86,Retained cholelithiasis following cholecystectomy
+947,235919008,Gallbladder calculus (disorder),K80,Cholelithiasis
+1209,237602007,Metabolic syndrome X (disorder),E88.81,Metabolic syndrome
+960,239872002,Osteoarthritis of hip (disorder),M16,Osteoarthritis of hip
+1223,239873007,Osteoarthritis of knee (disorder),M17,Osteoarthritis of knee
+1002,24079001,Atopic dermatitis (disorder),L20,Atopic dermatitis
+1248,249497008,Vomiting symptom (finding),R11.10,"Vomiting, unspecified"
+548,25064002,Headache (finding),G44.84,Primary exertional headache
+549,25064002,Headache (finding),G44.89,Other headache syndrome
+550,25064002,Headache (finding),R51,Headache
+552,25064002,Headache (finding),G44.40,"Drug-induced headache, not elsewhere classified, not intractable"
+553,25064002,Headache (finding),G44.30,"Post-traumatic headache, unspecified"
+554,25064002,Headache (finding),G43.80,"Other migraine, not intractable"
+555,25064002,Headache (finding),G44.41,"Drug-induced headache, not elsewhere classified, intractable"
+547,25064002,Headache (finding),G44.4,"Drug-induced headache, not elsewhere classified"
+512,254837009,Malignant neoplasm of breast (disorder),D05.90,Unspecified type of carcinoma in situ of unspecified breast
+513,254837009,Malignant neoplasm of breast (disorder),C79.81,Secondary malignant neoplasm of breast
+514,254837009,Malignant neoplasm of breast (disorder),D05.91,Unspecified type of carcinoma in situ of right breast
+515,254837009,Malignant neoplasm of breast (disorder),D05.92,Unspecified type of carcinoma in situ of left breast
+511,254837009,Malignant neoplasm of breast (disorder),C50,Malignant neoplasm of breast
+1216,25569003,Ventricular tachycardia (disorder),I47.2,Ventricular tachycardia
+461,266569009,Benign prostatic hyperplasia (disorder),N40,Benign prostatic hyperplasia
+343,267036007,Dyspnea (finding),R06.0,Dyspnea
+1247,267060006,Diarrhea symptom (finding),R19.7,"Diarrhea, unspecified"
+1338,267102003,Sore throat symptom (finding),J02.9,"Acute pharyngitis, unspecified"
+720,26929004,Alzheimer's disease (disorder),G30,Alzheimer's disease
+1054,271737000,Anemia (disorder),D46.4,"Refractory anemia, unspecified"
+1059,271737000,Anemia (disorder),O99.01,Anemia complicating pregnancy
+1052,271737000,Anemia (disorder),D64,Other anemias
+1058,271737000,Anemia (disorder),D63,Anemia in chronic diseases classified elsewhere
+1056,271737000,Anemia (disorder),D55,Anemia due to enzyme disorders
+1057,271737000,Anemia (disorder),D56.1,Beta thalassemia
+753,271825005,Respiratory distress (finding),R06.03,Acute respiratory distress
+752,271825005,Respiratory distress (finding),R06.09,Other forms of dyspnea
+754,271825005,Respiratory distress (finding),P22.0,Respiratory distress syndrome of newborn
+751,271825005,Respiratory distress (finding),R06.00,"Dyspnea, unspecified"
+1006,278860009,Chronic low back pain (finding),M54.5,Low back pain
+1082,27942005,Shock (disorder),O08.3,Shock following ectopic and molar pregnancy
+1078,27942005,Shock (disorder),O03.31,Shock following incomplete spontaneous abortion
+1077,27942005,Shock (disorder),R57.0,Cardiogenic shock
+1081,27942005,Shock (disorder),R57.9,"Shock, unspecified"
+1079,27942005,Shock (disorder),R57.8,Other shock
+1080,27942005,Shock (disorder),O03.81,Shock following complete or unspecified spontaneous abortion
+1340,282825002,Paroxysmal atrial fibrillation (disorder),I48.0,Paroxysmal atrial fibrillation
+556,302226006,Peripheral nerve disease (disorder),G56.92,Unspecified mononeuropathy of left upper limb
+561,302226006,Peripheral nerve disease (disorder),G62.0,Drug-induced polyneuropathy
+563,302226006,Peripheral nerve disease (disorder),G58.8,Other specified mononeuropathies
+558,302226006,Peripheral nerve disease (disorder),G56.91,Unspecified mononeuropathy of right upper limb
+560,302226006,Peripheral nerve disease (disorder),E11.42,Type 2 diabetes mellitus with diabetic polyneuropathy
+557,302226006,Peripheral nerve disease (disorder),G58.9,"Mononeuropathy, unspecified"
+564,302226006,Peripheral nerve disease (disorder),G56.90,Unspecified mononeuropathy of unspecified upper limb
+566,302226006,Peripheral nerve disease (disorder),G62.9,"Polyneuropathy, unspecified"
+559,302226006,Peripheral nerve disease (disorder),G64,Other disorders of peripheral nervous system
+562,302226006,Peripheral nerve disease (disorder),E10.42,Type 1 diabetes mellitus with diabetic polyneuropathy
+215,302870006,Hypertriglyceridemia (disorder),E78.2,Mixed hyperlipidemia
+216,302870006,Hypertriglyceridemia (disorder),E78.3,Hyperchylomicronemia
+214,302870006,Hypertriglyceridemia (disorder),E78.1,Pure hyperglyceridemia
+1040,34095006,Dehydration (disorder),E86.0,Dehydration
+1042,34095006,Dehydration (disorder),P74.1,Dehydration of newborn
+1271,34713006,Vitamin D deficiency (disorder),E55,Vitamin D deficiency
+195,35489007,Depressive disorder (disorder),F31.76,"Bipolar disorder, in full remission, most recent episode depressed"
+196,35489007,Depressive disorder (disorder),F34.1,Dysthymic disorder
+199,35489007,Depressive disorder (disorder),F32.3,"Major depressive disorder, single episode, severe with psychotic features"
+202,35489007,Depressive disorder (disorder),F31.5,"Bipolar disorder, current episode depressed, severe, with psychotic features"
+210,35489007,Depressive disorder (disorder),F10.24,Alcohol dependence with alcohol-induced mood disorder
+206,35489007,Depressive disorder (disorder),F14.24,Cocaine dependence with cocaine-induced mood disorder
+197,35489007,Depressive disorder (disorder),F43.20,"Adjustment disorder, unspecified"
+198,35489007,Depressive disorder (disorder),F14.94,"Cocaine use, unspecified with cocaine-induced mood disorder"
+200,35489007,Depressive disorder (disorder),F31.0,"Bipolar disorder, current episode hypomanic"
+201,35489007,Depressive disorder (disorder),F31.81,Bipolar II disorder
+203,35489007,Depressive disorder (disorder),F32.9,"Major depressive disorder, single episode, unspecified"
+204,35489007,Depressive disorder (disorder),F32.8,Other depressive episodes
+209,35489007,Depressive disorder (disorder),F32.89,Other specified depressive episodes
+211,35489007,Depressive disorder (disorder),F10.14,Alcohol abuse with alcohol-induced mood disorder
+212,35489007,Depressive disorder (disorder),F31.9,"Bipolar disorder, unspecified"
+213,35489007,Depressive disorder (disorder),F10.94,"Alcohol use, unspecified with alcohol-induced mood disorder"
+207,35489007,Depressive disorder (disorder),F06.31,Mood disorder due to known physiological condition with depressive features
+208,35489007,Depressive disorder (disorder),F31.32,"Bipolar disorder, current episode depressed, moderate"
+193,35489007,Depressive disorder (disorder),F14.14,Cocaine abuse with cocaine-induced mood disorder
+194,35489007,Depressive disorder (disorder),O99.34,"Other mental disorders complicating pregnancy, childbirth, and the puerperium"
+1072,363406005,Malignant neoplasm of colon (disorder),C19,Malignant neoplasm of rectosigmoid junction
+1073,363406005,Malignant neoplasm of colon (disorder),C18,Malignant neoplasm of colon
+991328,367498001,Seasonal allergic rhinitis (disorder),J30.1,Allergic rhinitis due to pollen
+1330,367498001,Seasonal allergic rhinitis (disorder),J30.89,Other allergic rhinitis
+1329,367498001,Seasonal allergic rhinitis (disorder),J30.2,Other seasonal allergic rhinitis
+1315,368581000119106,Neuropathy due to type 2 diabetes mellitus (disorder),E11.40,"Type 2 diabetes mellitus with diabetic neuropathy, unspecified"
+1355,36955009,Loss of taste (finding),R43.2,Parageusia
+1104,36971009,Sinusitis (disorder),J32.9,"Chronic sinusitis, unspecified"
+1107,36971009,Sinusitis (disorder),J30.9,"Allergic rhinitis, unspecified"
+1105,36971009,Sinusitis (disorder),J11.1,Influenza due to unidentified influenza virus with other respiratory manifestations
+1106,36971009,Sinusitis (disorder),J01.90,"Acute sinusitis, unspecified"
+1291,370143000,Major depressive disorder (disorder),F33.9,"Major depressive disorder, recurrent, unspecified"
+1289,370143000,Major depressive disorder (disorder),F32.9,"Major depressive disorder, single episode, unspecified"
+1290,370143000,Major depressive disorder (disorder),F34.1,Dysthymic disorder
+937,386661006,Fever (finding),M04.1,Periodic fever syndromes
+938,386661006,Fever (finding),R50.9,"Fever, unspecified"
+940,386661006,Fever (finding),R50.2,Drug induced fever
+939,386661006,Fever (finding),R50.81,Fever presenting with conditions classified elsewhere
+945,386661006,Fever (finding),R50.82,Postprocedural fever
+942,386661006,Fever (finding),R50.8,Other specified fever
+944,386661006,Fever (finding),P81.9,"Disturbance of temperature regulation of newborn, unspecified"
+686,38822007,Cystitis (disorder),N30,Cystitis
+1241,389086002,Hypoxia (disorder),R09.02,Hypoxemia
+1240,389086002,Hypoxia (disorder),J96.01,Acute respiratory failure with hypoxia
+1244,389086002,Hypoxia (disorder),R06.09,Other forms of dyspnea
+1242,389086002,Hypoxia (disorder),J96.21,Acute and chronic respiratory failure with hypoxia
+1243,389086002,Hypoxia (disorder),G47.34,Idiopathic sleep related nonobstructive alveolar hypoventilation
+346,389087006,Hypoxemia (disorder),R09.02,Hypoxemia
+841,398254007,Pre-eclampsia (disorder),O11.3,"Pre-existing hypertension with pre-eclampsia, third trimester"
+842,398254007,Pre-eclampsia (disorder),O14,Pre-eclampsia
+840,398254007,Pre-eclampsia (disorder),O11.1,"Pre-existing hypertension with pre-eclampsia, first trimester"
+839,398254007,Pre-eclampsia (disorder),O11.2,"Pre-existing hypertension with pre-eclampsia, second trimester"
+1031,399211009,History of myocardial infarction (situation),I51.0,"Cardiac septal defect, acquired"
+1033,399211009,History of myocardial infarction (situation),I22.8,Subsequent ST elevation (STEMI) myocardial infarction of other sites
+1032,399211009,History of myocardial infarction (situation),I23,Certain current complications following ST elevation (STEMI) and non-ST elevation (NSTEMI) myocardial infarction (within the 28 day period)
+1034,399211009,History of myocardial infarction (situation),I25.2,Old myocardial infarction
+574,400047006,Peripheral vascular disease (disorder),I70.21,Atherosclerosis of native arteries of extremities with intermittent claudication
+576,400047006,Peripheral vascular disease (disorder),I79.8,"Other disorders of arteries, arterioles and capillaries in diseases classified elsewhere"
+570,400047006,Peripheral vascular disease (disorder),E10.51,Type 1 diabetes mellitus with diabetic peripheral angiopathy without gangrene
+573,400047006,Peripheral vascular disease (disorder),I73,Other peripheral vascular diseases
+575,400047006,Peripheral vascular disease (disorder),E13.51,Other specified diabetes mellitus with diabetic peripheral angiopathy without gangrene
+577,400047006,Peripheral vascular disease (disorder),I70.26,Atherosclerosis of native arteries of extremities with gangrene
+578,400047006,Peripheral vascular disease (disorder),I70.20,Unspecified atherosclerosis of native arteries of extremities
+579,400047006,Peripheral vascular disease (disorder),R09.89,Other specified symptoms and signs involving the circulatory and respiratory systems
+571,400047006,Peripheral vascular disease (disorder),E11.51,Type 2 diabetes mellitus with diabetic peripheral angiopathy without gangrene
+572,400047006,Peripheral vascular disease (disorder),I87.2,Venous insufficiency (chronic) (peripheral)
+569,400047006,Peripheral vascular disease (disorder),Q27.9,"Congenital malformation of peripheral vascular system, unspecified"
+1307,40055000,Chronic sinusitis (disorder),J32,Chronic sinusitis
+1235,40095003,Injury of kidney (disorder),N14.1,"Nephropathy induced by other drugs, medicaments and biological substances"
+1234,40095003,Injury of kidney (disorder),N14.2,"Nephropathy induced by unspecified drug, medicament or biological substance"
+1236,40095003,Injury of kidney (disorder),S37.0,Injury of kidney
+1238,40095003,Injury of kidney (disorder),T86.19,Other complication of kidney transplant
+1237,40095003,Injury of kidney (disorder),S37.09,Other injury of kidney
+1239,40095003,Injury of kidney (disorder),N17.9,"Acute kidney failure, unspecified"
+1119,40275004,Contact dermatitis (disorder),L25,Unspecified contact dermatitis
+1120,40275004,Contact dermatitis (disorder),L23.81,Allergic contact dermatitis due to animal (cat) (dog) dander
+508,40930008,Hypothyroidism (disorder),E03,Other hypothyroidism
+1269,409609008,Radiologic infiltrate of lung (disorder),R91.8,Other nonspecific abnormal finding of lung field
+1270,409609008,Radiologic infiltrate of lung (disorder),M31.30,Wegener's granulomatosis without renal involvement
+1044,410429000,Cardiac arrest (disorder),I46,Cardiac arrest
+1050,410429000,Cardiac arrest (disorder),O07.36,Cardiac arrest following failed attempted termination of pregnancy
+1046,410429000,Cardiac arrest (disorder),I97.71,Intraoperative cardiac arrest
+1045,410429000,Cardiac arrest (disorder),I97.12,Postprocedural cardiac arrest
+1049,410429000,Cardiac arrest (disorder),O03.86,Cardiac arrest following complete or unspecified spontaneous abortion
+1047,410429000,Cardiac arrest (disorder),O29.11,Cardiac arrest due to anesthesia during pregnancy
+1048,410429000,Cardiac arrest (disorder),O08.81,Cardiac arrest following an ectopic and molar pregnancy
+101,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),Z79.4,Long term (current) use of insulin
+102,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),H54.7,Unspecified visual loss
+100,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),E11.65,Type 2 diabetes mellitus with hyperglycemia
+106,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),E11.33,Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy
+105,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),E11.34,Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy
+103,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),E11.31,Type 2 diabetes mellitus with unspecified diabetic retinopathy
+104,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),H43.10,"Vitreous hemorrhage, unspecified eye"
+107,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),E11.39,Type 2 diabetes mellitus with other diabetic ophthalmic complication
+109,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),E11.35,Type 2 diabetes mellitus with proliferative diabetic retinopathy
+108,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),E11.32,Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy
+99,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),H54.8,"Legal blindness, as defined in USA"
+1076,422587007,Nausea (finding),R11.0,Nausea
+843,42343007,Congestive heart failure (disorder),I11.0,Hypertensive heart disease with heart failure
+848,42343007,Congestive heart failure (disorder),P29.0,Neonatal cardiac failure
+853,42343007,Congestive heart failure (disorder),I50.20,Unspecified systolic (congestive) heart failure
+844,42343007,Congestive heart failure (disorder),I50.23,Acute on chronic systolic (congestive) heart failure
+849,42343007,Congestive heart failure (disorder),I50.22,Chronic systolic (congestive) heart failure
+854,42343007,Congestive heart failure (disorder),I50.31,Acute diastolic (congestive) heart failure
+855,42343007,Congestive heart failure (disorder),I50.30,Unspecified diastolic (congestive) heart failure
+860,42343007,Congestive heart failure (disorder),I50.3,Diastolic (congestive) heart failure
+845,42343007,Congestive heart failure (disorder),I50.43,Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure
+846,42343007,Congestive heart failure (disorder),I50.9,"Heart failure, unspecified"
+850,42343007,Congestive heart failure (disorder),I50.21,Acute systolic (congestive) heart failure
+856,42343007,Congestive heart failure (disorder),I50.1,"Left ventricular failure, unspecified"
+857,42343007,Congestive heart failure (disorder),I13.0,"Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+861,42343007,Congestive heart failure (disorder),I13.2,"Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease"
+859,42343007,Congestive heart failure (disorder),I50.42,Chronic combined systolic (congestive) and diastolic (congestive) heart failure
+851,42343007,Congestive heart failure (disorder),I50.32,Chronic diastolic (congestive) heart failure
+847,42343007,Congestive heart failure (disorder),I50.40,Unspecified combined systolic (congestive) and diastolic (congestive) heart failure
+858,42343007,Congestive heart failure (disorder),R09.89,Other specified symptoms and signs involving the circulatory and respiratory systems
+862,42343007,Congestive heart failure (disorder),I50.33,Acute on chronic diastolic (congestive) heart failure
+852,42343007,Congestive heart failure (disorder),I50.41,Acute combined systolic (congestive) and diastolic (congestive) heart failure
+1251,43339004,Hypokalemia (disorder),E87.6,Hypokalemia
+1126,43724002,Chill (finding),R68.83,Chills (without fever)
+1023,43878008,Streptococcal sore throat (disorder),J03.00,"Acute streptococcal tonsillitis, unspecified"
+1024,43878008,Streptococcal sore throat (disorder),J02.0,Streptococcal pharyngitis
+43,44054006,Diabetes mellitus type 2 (disorder),E11,Type 2 diabetes mellitus
+1199,444814009,Viral sinusitis (disorder),J01.90,"Acute sinusitis, unspecified"
+1352,446096008,Perennial allergic rhinitis (disorder),J30.89,Other allergic rhinitis
+1124,47693006,Rupture of appendix (disorder),K35.32,"Acute appendicitis with perforation and localized peritonitis, without abscess"
+1125,47693006,Rupture of appendix (disorder),K35.33,"Acute appendicitis with perforation and localized peritonitis, with abscess"
+1169,49436004,Atrial fibrillation (disorder),I48.20,"Chronic atrial fibrillation, unspecified"
+1168,49436004,Atrial fibrillation (disorder),I48.91,Unspecified atrial fibrillation
+1303,49727002,Cough (finding),J98.01,Acute bronchospasm
+1304,49727002,Cough (finding),J06.9,"Acute upper respiratory infection, unspecified"
+1302,49727002,Cough (finding),R05,Cough
+1229,51387008,Acidosis (disorder),E87.2,Acidosis
+1230,51387008,Acidosis (disorder),E13.10,Other specified diabetes mellitus with ketoacidosis without coma
+334,52448006,Dementia (disorder),F02.80,Dementia in other diseases classified elsewhere without behavioral disturbance
+335,52448006,Dementia (disorder),F01.50,Vascular dementia without behavioral disturbance
+336,52448006,Dementia (disorder),F06.8,Other specified mental disorders due to known physiological condition
+333,52448006,Dementia (disorder),F03,Unspecified dementia
+464,53741008,Coronary arteriosclerosis (disorder),I25.11,Atherosclerotic heart disease of native coronary artery with angina pectoris
+465,53741008,Coronary arteriosclerosis (disorder),I25.81,Atherosclerosis of other coronary vessels without angina pectoris
+466,53741008,Coronary arteriosclerosis (disorder),I25.83,Coronary atherosclerosis due to lipid rich plaque
+462,53741008,Coronary arteriosclerosis (disorder),I25.75,Atherosclerosis of native coronary artery of transplanted heart with angina pectoris
+463,53741008,Coronary arteriosclerosis (disorder),I25.10,Atherosclerotic heart disease of native coronary artery without angina pectoris
+448,55822004,Hyperlipidemia (disorder),E78.49,Other hyperlipidemia
+453,55822004,Hyperlipidemia (disorder),E78.3,Hyperchylomicronemia
+449,55822004,Hyperlipidemia (disorder),R79.89,Other specified abnormal findings of blood chemistry
+452,55822004,Hyperlipidemia (disorder),E78.4,Other hyperlipidemia
+450,55822004,Hyperlipidemia (disorder),E78.5,"Hyperlipidemia, unspecified"
+451,55822004,Hyperlipidemia (disorder),E78.1,Pure hyperglyceridemia
+300,56018004,Wheezing (finding),J45.51,Severe persistent asthma with (acute) exacerbation
+301,56018004,Wheezing (finding),J45.52,Severe persistent asthma with status asthmaticus
+304,56018004,Wheezing (finding),J45.42,Moderate persistent asthma with status asthmaticus
+305,56018004,Wheezing (finding),J45.21,Mild intermittent asthma with (acute) exacerbation
+306,56018004,Wheezing (finding),J45.50,"Severe persistent asthma, uncomplicated"
+303,56018004,Wheezing (finding),J45.32,Mild persistent asthma with status asthmaticus
+297,56018004,Wheezing (finding),R06.2,Wheezing
+307,56018004,Wheezing (finding),J45.22,Mild intermittent asthma with status asthmaticus
+308,56018004,Wheezing (finding),J45.30,"Mild persistent asthma, uncomplicated"
+310,56018004,Wheezing (finding),J45.31,Mild persistent asthma with (acute) exacerbation
+302,56018004,Wheezing (finding),J45.90,Unspecified asthma
+298,56018004,Wheezing (finding),J45.40,"Moderate persistent asthma, uncomplicated"
+309,56018004,Wheezing (finding),J98.8,Other specified respiratory disorders
+311,56018004,Wheezing (finding),J45.20,"Mild intermittent asthma, uncomplicated"
+299,56018004,Wheezing (finding),J45.41,Moderate persistent asthma with (acute) exacerbation
+516,5602001,Opioid abuse (disorder),F11.22,Opioid dependence with intoxication
+521,5602001,Opioid abuse (disorder),F11.94,"Opioid use, unspecified with opioid-induced mood disorder"
+517,5602001,Opioid abuse (disorder),F11.10,"Opioid abuse, uncomplicated"
+522,5602001,Opioid abuse (disorder),F11.92,"Opioid use, unspecified with intoxication"
+524,5602001,Opioid abuse (disorder),F11.12,Opioid abuse with intoxication
+518,5602001,Opioid abuse (disorder),F11.98,"Opioid use, unspecified with other specified opioid-induced disorder"
+525,5602001,Opioid abuse (disorder),F11.93,"Opioid use, unspecified with withdrawal"
+527,5602001,Opioid abuse (disorder),F11.15,Opioid abuse with opioid-induced psychotic disorder
+532,5602001,Opioid abuse (disorder),F11.90,"Opioid use, unspecified, uncomplicated"
+520,5602001,Opioid abuse (disorder),F11.95,"Opioid use, unspecified with opioid-induced psychotic disorder"
+526,5602001,Opioid abuse (disorder),F11.28,Opioid dependence with other opioid-induced disorder
+528,5602001,Opioid abuse (disorder),F11.11,"Opioid abuse, in remission"
+529,5602001,Opioid abuse (disorder),F11.13,Opioid abuse with withdrawal
+533,5602001,Opioid abuse (disorder),F11.21,"Opioid dependence, in remission"
+535,5602001,Opioid abuse (disorder),F11.20,"Opioid dependence, uncomplicated"
+523,5602001,Opioid abuse (disorder),F11.18,Opioid abuse with other opioid-induced disorder
+530,5602001,Opioid abuse (disorder),F11.19,Opioid abuse with unspecified opioid-induced disorder
+534,5602001,Opioid abuse (disorder),F11.1,Opioid abuse
+531,5602001,Opioid abuse (disorder),F11.99,"Opioid use, unspecified with unspecified opioid-induced disorder"
+749,57676002,Joint pain (finding),M25.5,Pain in joint
+1263,59621000,Essential hypertension (disorder),I10,Essential (primary) hypertension
+1010,60046008,Pleural effusion (disorder),J90,"Pleural effusion, not elsewhere classified"
+1011,60046008,Pleural effusion (disorder),J94.8,Other specified pleural conditions
+1012,60046008,Pleural effusion (disorder),J91,Pleural effusion in conditions classified elsewhere
+1293,6072007,Bleeding from anus (disorder),K62.5,Hemorrhage of anus and rectum
+683,6142004,Influenza (disorder),J09,Influenza due to certain identified influenza viruses
+684,6142004,Influenza (disorder),J10,Influenza due to other identified influenza virus
+685,6142004,Influenza (disorder),J11,Influenza due to unidentified influenza virus
+1086,64859006,Osteoporosis (disorder),M80,Osteoporosis with current pathological fracture
+1085,64859006,Osteoporosis (disorder),M81,Osteoporosis without current pathological fracture
+793,65275009,Acute cholecystitis (disorder),K81.0,Acute cholecystitis
+794,65275009,Acute cholecystitis (disorder),K80.63,Calculus of gallbladder and bile duct with acute cholecystitis with obstruction
+795,65275009,Acute cholecystitis (disorder),K80.62,Calculus of gallbladder and bile duct with acute cholecystitis without obstruction
+255,65710008,Acute respiratory failure (disorder),J96.01,Acute respiratory failure with hypoxia
+260,65710008,Acute respiratory failure (disorder),J95.88,"Other intraoperative complications of respiratory system, not elsewhere classified"
+256,65710008,Acute respiratory failure (disorder),J96.0,Acute respiratory failure
+259,65710008,Acute respiratory failure (disorder),J96.20,"Acute and chronic respiratory failure, unspecified whether with hypoxia or hypercapnia"
+257,65710008,Acute respiratory failure (disorder),J95.82,Postprocedural respiratory failure
+258,65710008,Acute respiratory failure (disorder),J96.00,"Acute respiratory failure, unspecified whether with hypoxia or hypercapnia"
+1356,66857006,Hemoptysis (finding),R04.2,Hemoptysis
+1051,67782005,Acute respiratory distress syndrome (disorder),J80,Acute respiratory distress syndrome
+1122,68235000,Nasal congestion (finding),R09.81,Nasal congestion
+727,68496003,Polyp of colon (disorder),K51.41,Inflammatory polyps of colon with complications
+725,68496003,Polyp of colon (disorder),K51.40,Inflammatory polyps of colon without complications
+726,68496003,Polyp of colon (disorder),K63.5,Polyp of colon
+601,68566005,Urinary tract infectious disease (disorder),N99.52,Complication of incontinent external stoma of urinary tract
+602,68566005,Urinary tract infectious disease (disorder),N12,"Tubulo-interstitial nephritis, not specified as acute or chronic"
+603,68566005,Urinary tract infectious disease (disorder),O99.82,"Streptococcus B carrier state complicating pregnancy, childbirth and the puerperium"
+604,68566005,Urinary tract infectious disease (disorder),Z87.44,Personal history of diseases of urinary system
+600,68566005,Urinary tract infectious disease (disorder),O03.88,Urinary tract infection following complete or unspecified spontaneous abortion
+599,68566005,Urinary tract infectious disease (disorder),N39.0,"Urinary tract infection, site not specified"
+1093,68962001,Muscle pain (finding),M79.18,"Myalgia, other site"
+1094,68962001,Muscle pain (finding),M54.2,Cervicalgia
+1095,68962001,Muscle pain (finding),M79.11,Myalgia of mastication muscle
+1090,68962001,Muscle pain (finding),M79.1,Myalgia
+1096,68962001,Muscle pain (finding),M79.12,"Myalgia of auxiliary muscles, head and neck"
+1092,68962001,Muscle pain (finding),M79.7,Fibromyalgia
+427,69896004,Rheumatoid arthritis (disorder),M06,Other rheumatoid arthritis
+423,69896004,Rheumatoid arthritis (disorder),M05,Rheumatoid arthritis with rheumatoid factor
+424,69896004,Rheumatoid arthritis (disorder),M65.83,"Other synovitis and tenosynovitis, forearm"
+887,706870000,Acute pulmonary embolism (disorder),I26.92,Saddle embolus of pulmonary artery without acute cor pulmonale
+886,706870000,Acute pulmonary embolism (disorder),I26.99,Other pulmonary embolism without acute cor pulmonale
+888,706870000,Acute pulmonary embolism (disorder),I26.09,Other pulmonary embolism with acute cor pulmonale
+885,706870000,Acute pulmonary embolism (disorder),I26.02,Saddle embolus of pulmonary artery with acute cor pulmonale
+883,706870000,Acute pulmonary embolism (disorder),I26.90,Septic pulmonary embolism without acute cor pulmonale
+884,706870000,Acute pulmonary embolism (disorder),I26.01,Septic pulmonary embolism with acute cor pulmonale
+1308,713197008,Recurrent rectal polyp (disorder),K62.1,Rectal polyp
+1015,7200002,Alcoholism (disorder),F10.95,"Alcohol use, unspecified with alcohol-induced psychotic disorder"
+1016,7200002,Alcoholism (disorder),F10.20,"Alcohol dependence, uncomplicated"
+1017,7200002,Alcoholism (disorder),F10.25,Alcohol dependence with alcohol-induced psychotic disorder
+1013,7200002,Alcoholism (disorder),F10.22,Alcohol dependence with intoxication
+1018,7200002,Alcoholism (disorder),Z71.41,Alcohol abuse counseling and surveillance of alcoholic
+1014,7200002,Alcoholism (disorder),K70.30,Alcoholic cirrhosis of liver without ascites
+10,72092001,Arteriosclerotic vascular disease (disorder),I65.1,Occlusion and stenosis of basilar artery
+11,72092001,Arteriosclerotic vascular disease (disorder),I65.23,Occlusion and stenosis of bilateral carotid arteries
+15,72092001,Arteriosclerotic vascular disease (disorder),I70,Atherosclerosis
+12,72092001,Arteriosclerotic vascular disease (disorder),I12.0,Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease
+9,72092001,Arteriosclerotic vascular disease (disorder),I25.10,Atherosclerotic heart disease of native coronary artery without angina pectoris
+13,72092001,Arteriosclerotic vascular disease (disorder),I65.29,Occlusion and stenosis of unspecified carotid artery
+1,72092001,Arteriosclerotic vascular disease (disorder),F01.51,Vascular dementia with behavioral disturbance
+14,72092001,Arteriosclerotic vascular disease (disorder),K55.1,Chronic vascular disorders of intestine
+710,737303004,Acquired absence of organ (disorder),Z90.6,"Acquired absence of organs, not elsewhere classified"
+834,74400008,Appendicitis (disorder),K36,Other appendicitis
+835,74400008,Appendicitis (disorder),K37,Unspecified appendicitis
+838,74400008,Appendicitis (disorder),A42.1,Abdominal actinomycosis
+836,74400008,Appendicitis (disorder),K35.89,Other acute appendicitis
+837,74400008,Appendicitis (disorder),K35.33,"Acute appendicitis with perforation and localized peritonitis, with abscess"
+110,76571007,Septic shock (disorder),R65.21,Severe sepsis with septic shock
+1191,78275009,Obstructive sleep apnea syndrome (disorder),G47.33,Obstructive sleep apnea (adult) (pediatric)
+1258,79586000,Tubal pregnancy (disorder),O00.11,Tubal pregnancy with intrauterine pregnancy
+1257,79586000,Tubal pregnancy (disorder),O00.10,Tubal pregnancy without intrauterine pregnancy
+1256,79586000,Tubal pregnancy (disorder),O00.1,Tubal pregnancy
+1201,80394007,Hyperglycemia (disorder),E11.65,Type 2 diabetes mellitus with hyperglycemia
+1202,80394007,Hyperglycemia (disorder),E11.01,Type 2 diabetes mellitus with hyperosmolarity with coma
+1203,80394007,Hyperglycemia (disorder),E10.65,Type 1 diabetes mellitus with hyperglycemia
+1204,80394007,Hyperglycemia (disorder),E13.65,Other specified diabetes mellitus with hyperglycemia
+1205,80394007,Hyperglycemia (disorder),R73,Elevated blood glucose level
+383,82423001,Chronic pain (finding),G89.29,Other chronic pain
+382,82423001,Chronic pain (finding),G89.3,Neoplasm related pain (acute) (chronic)
+380,82423001,Chronic pain (finding),G89.4,Chronic pain syndrome
+381,82423001,Chronic pain (finding),M25.56,Pain in knee
+1353,83664006,Idiopathic atrophic hypothyroidism (disorder),E03.4,Atrophy of thyroid (acquired)
+806,840539006,Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder),U07.1,COVID-19
+390,84114007,Heart failure (disorder),I13.0,"Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+386,84114007,Heart failure (disorder),I97.13,Postprocedural heart failure
+391,84114007,Heart failure (disorder),I11.0,Hypertensive heart disease with heart failure
+389,84114007,Heart failure (disorder),I13.2,"Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease"
+387,84114007,Heart failure (disorder),P29.0,Neonatal cardiac failure
+392,84114007,Heart failure (disorder),I50,Heart failure
+388,84114007,Heart failure (disorder),I51.9,"Heart disease, unspecified"
+967,84229001,Fatigue (finding),R53.83,Other fatigue
+968,84229001,Fatigue (finding),R53.82,"Chronic fatigue, unspecified"
+280,84757009,Epilepsy (disorder),G40,Epilepsy and recurrent seizures
+283,84757009,Epilepsy (disorder),P90,Convulsions of newborn
+279,84757009,Epilepsy (disorder),O99.35,"Diseases of the nervous system complicating pregnancy, childbirth, and the puerperium"
+1173,86175003,Injury of heart (disorder),S26,Injury of heart
+1143,87433001,Pulmonary emphysema (disorder),J43,Emphysema
+1144,87433001,Pulmonary emphysema (disorder),J44.0,Chronic obstructive pulmonary disease with (acute) lower respiratory infection
+905,87628006,Bacterial infectious disease (disorder),A48,"Other bacterial diseases, not elsewhere classified"
+904,87628006,Bacterial infectious disease (disorder),B96.8,Other specified bacterial agents as the cause of diseases classified elsewhere
+900,87628006,Bacterial infectious disease (disorder),A49.8,Other bacterial infections of unspecified site
+906,87628006,Bacterial infectious disease (disorder),A49.9,"Bacterial infection, unspecified"
+903,87628006,Bacterial infectious disease (disorder),A28,"Other zoonotic bacterial diseases, not elsewhere classified"
+901,87628006,Bacterial infectious disease (disorder),B96.89,Other specified bacterial agents as the cause of diseases classified elsewhere
+907,87628006,Bacterial infectious disease (disorder),L08.9,"Local infection of the skin and subcutaneous tissue, unspecified"
+902,87628006,Bacterial infectious disease (disorder),A77.49,Other ehrlichiosis
+889,88805009,Chronic congestive heart failure (disorder),I50.22,Chronic systolic (congestive) heart failure
+890,88805009,Chronic congestive heart failure (disorder),I50.9,"Heart failure, unspecified"
+891,88805009,Chronic congestive heart failure (disorder),I50.32,Chronic diastolic (congestive) heart failure
+892,88805009,Chronic congestive heart failure (disorder),I50.42,Chronic combined systolic (congestive) and diastolic (congestive) heart failure
+219,89627008,Hyponatremia (disorder),E87.1,Hypo-osmolality and hyponatremia
+1145,90560007,Inflammatory disorder due to increased blood urate level (disorder),M10,Gout
+1146,90560007,Inflammatory disorder due to increased blood urate level (disorder),M1A,Chronic gout
+502,91302008,Sepsis (disorder),R65.2,Severe sepsis
+503,91302008,Sepsis (disorder),A41,Other sepsis
+504,91302008,Sepsis (disorder),R65.21,Severe sepsis with septic shock
+500,91302008,Sepsis (disorder),O03.87,Sepsis following complete or unspecified spontaneous abortion
+505,91302008,Sepsis (disorder),R65.20,Severe sepsis without septic shock
+501,91302008,Sepsis (disorder),O86.04,Sepsis following an obstetrical procedure
+499,91302008,Sepsis (disorder),O85,Puerperal sepsis
+506,91302008,Sepsis (disorder),K83.09,Other cholangitis
+1313,92691004,Carcinoma in situ of prostate (disorder),D07.5,Carcinoma in situ of prostate
+1035,93761005,Primary malignant neoplasm of colon (disorder),D01.0,Carcinoma in situ of colon
+1036,93761005,Primary malignant neoplasm of colon (disorder),C18.9,"Malignant neoplasm of colon, unspecified"
+1037,93761005,Primary malignant neoplasm of colon (disorder),C49.A4,Gastrointestinal stromal tumor of large intestine
+1350,94260004,Secondary malignant neoplasm of colon (disorder),C78.5,Secondary malignant neoplasm of large intestine and rectum
+976,991000119106,Reactive airway disease (disorder),J45.32,Mild persistent asthma with status asthmaticus
+977,991000119106,Reactive airway disease (disorder),J45.31,Mild persistent asthma with (acute) exacerbation
+978,991000119106,Reactive airway disease (disorder),J45.50,"Severe persistent asthma, uncomplicated"
+972,991000119106,Reactive airway disease (disorder),J45.40,"Moderate persistent asthma, uncomplicated"
+979,991000119106,Reactive airway disease (disorder),J45.20,"Mild intermittent asthma, uncomplicated"
+981,991000119106,Reactive airway disease (disorder),J45.99,Other asthma
+986,991000119106,Reactive airway disease (disorder),J45.21,Mild intermittent asthma with (acute) exacerbation
+973,991000119106,Reactive airway disease (disorder),J44.1,Chronic obstructive pulmonary disease with (acute) exacerbation
+980,991000119106,Reactive airway disease (disorder),J45.42,Moderate persistent asthma with status asthmaticus
+982,991000119106,Reactive airway disease (disorder),J45.30,"Mild persistent asthma, uncomplicated"
+985,991000119106,Reactive airway disease (disorder),J45.51,Severe persistent asthma with (acute) exacerbation
+974,991000119106,Reactive airway disease (disorder),J45.41,Moderate persistent asthma with (acute) exacerbation
+984,991000119106,Reactive airway disease (disorder),J45.22,Mild intermittent asthma with status asthmaticus
+975,991000119106,Reactive airway disease (disorder),J45.90,Unspecified asthma
+247,1501000119109,Proliferative retinopathy due to type 2 diabetes mellitus (disorder),Z79.4,Long term (current) use of insulin
+252,1501000119109,Proliferative retinopathy due to type 2 diabetes mellitus (disorder),H35.04,"Retinal micro-aneurysms, unspecified"
+249,1501000119109,Proliferative retinopathy due to type 2 diabetes mellitus (disorder),H54.7,Unspecified visual loss
+253,1501000119109,Proliferative retinopathy due to type 2 diabetes mellitus (disorder),H54.10,"Blindness, one eye, low vision other eye, unspecified eyes"
+251,1501000119109,Proliferative retinopathy due to type 2 diabetes mellitus (disorder),H43.10,"Vitreous hemorrhage, unspecified eye"
+250,1501000119109,Proliferative retinopathy due to type 2 diabetes mellitus (disorder),E11.39,Type 2 diabetes mellitus with other diabetic ophthalmic complication
+254,1501000119109,Proliferative retinopathy due to type 2 diabetes mellitus (disorder),E11.35,Type 2 diabetes mellitus with proliferative diabetic retinopathy
+955,233604007,Pneumonia (disorder),O99.51,Diseases of the respiratory system complicating pregnancy
+1118,40275004,Contact dermatitis (disorder),H60.8,Other otitis externa
+510,40930008,Hypothyroidism (disorder),E07.89,Other specified disorders of thyroid
+971,991000119106,Reactive airway disease (disorder),J45.52,Severe persistent asthma with status asthmaticus

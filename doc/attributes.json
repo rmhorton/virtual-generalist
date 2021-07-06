@@ -526,6 +526,17 @@
     "write": {},
     "example_values": []
   },
+  "Penicillin_Allergy": {
+    "read": {},
+    "write": {
+      "Drug_Allergies": [
+        "True_Penicillin_Allergy"
+      ]
+    },
+    "example_values": [
+      "true"
+    ]
+  },
   "Posterior_Drooling": {
     "read": {
       "Cerebral Palsy": [
@@ -658,6 +669,7 @@
       "Sinusitis": [
         "Chronic_Sinusitis_Followup",
         "Doctor_Visit",
+        "Prescribe_Alternative_Antibiotic",
         "Prescribe_Antibiotic",
         "Sinusitis_Ends"
       ]
@@ -682,6 +694,8 @@
     },
     "write": {
       "Sore Throat": [
+        "Prescribe_Alternate_Adult",
+        "Prescribe_Alternate_Pediatric",
         "Prescribe_Antibiotics_Adult",
         "Prescribe_Antibiotics_Child"
       ]
@@ -1048,10 +1062,12 @@
     "write": {
       "Ear Infection Antibiotic": [
         "Adult_Amoxicillin",
+        "Adult_Azithromycin",
         "Adult_Cefaclor",
         "Adult_Doxycycline",
         "Pediatric_Amoxicillin",
         "Pediatric_Cefaclor",
+        "Pediatric_Cefdinir",
         "Pediatric_Doxycycline",
         "Prescribe_Ampicillin",
         "Prescribe_Cefuroxime",
@@ -1067,6 +1083,18 @@
     "example_values": [
       "MedicationOrder"
     ]
+  },
+  "anxiety_screening_score": {
+    "read": {},
+    "write": {
+      "anxiety_screening": [
+        "Low Anxiety Score",
+        "Mild Anxiety Score",
+        "Moderate Anxiety Score",
+        "Severe Anxiety Score"
+      ]
+    },
+    "example_values": []
   },
   "arthritis_careplan": {
     "read": {},
@@ -1181,20 +1209,13 @@
         "Delay_For_Atopy"
       ],
       "Allergy Incidence": [
-        "Chance_of_Bee_Allergy",
         "Chance_of_Dairy_Allergy",
-        "Chance_of_Dust_Mite_Allergy",
         "Chance_of_Eggs_Allergy",
         "Chance_of_Fish_Allergy",
-        "Chance_of_Grass_Pollen_Allergy",
-        "Chance_of_Latex_Allergy",
-        "Chance_of_Mold_Allergy",
         "Chance_of_Peanut_Allergy",
-        "Chance_of_Pet_Dander_Allergy",
         "Chance_of_Shellfish_Allergy",
         "Chance_of_Soy_Allergy",
         "Chance_of_TreeNut_Allergy",
-        "Chance_of_Tree_Pollen_Allergy",
         "Chance_of_Wheat_Allergy"
       ],
       "Asthma": [
@@ -1202,6 +1223,15 @@
       ],
       "Dermatitis": [
         "Delay_For_Atopy"
+      ],
+      "Environmental Allergy Incidence": [
+        "Chance_of_Bee_Allergy",
+        "Chance_of_Dust_Mite_Allergy",
+        "Chance_of_Grass_Pollen_Allergy",
+        "Chance_of_Latex_Allergy",
+        "Chance_of_Mold_Allergy",
+        "Chance_of_Pet_Dander_Allergy",
+        "Chance_of_Tree_Pollen_Allergy"
       ],
       "Food Allergies": [
         "Allergic_Reaction_To_Food"
@@ -1238,6 +1268,18 @@
       "Numeric"
     ]
   },
+  "auditc_score": {
+    "read": {},
+    "write": {
+      "substance use screening": [
+        "Healthy Female",
+        "Healthy Male",
+        "Unhealthy Female",
+        "Unhealthy Male"
+      ]
+    },
+    "example_values": []
+  },
   "birth_city": {
     "read": {},
     "write": {
@@ -1248,7 +1290,11 @@
     ]
   },
   "birth_country": {
-    "read": {},
+    "read": {
+      "SDoH HRSN": [
+        "Q19"
+      ]
+    },
     "write": {
       "LifecycleModule": []
     },
@@ -1373,6 +1419,9 @@
       "Record Vitals Signs": [
         "Record_Weight"
       ],
+      "SDoH HRSN": [
+        "Q3Y"
+      ],
       "Sexual Activity": [
         "Female_Sexual_Activity",
         "Male_Sexual_Activity",
@@ -1395,13 +1444,33 @@
         "Lab_LipidPanel",
         "Record Head Circumference",
         "Record_BMI",
-        "Record_Weight"
+        "Record_Weight",
+        "SDoH Check"
+      ],
+      "anxiety_screening": [
+        "Check Eligibility"
+      ],
+      "depression screening": [
+        "Age Check",
+        "Depression Screening",
+        "PHQ-9"
+      ],
+      "fall_risk_screening": [
+        "Check Eligibility"
+      ],
+      "hark_screening": [
+        "Check Eligibility"
       ],
       "infection": [
         "Apply Face Mask to Patient"
       ],
       "medications": [
         "Determine Clinical Trial Eligibility"
+      ],
+      "substance use screening": [
+        "AUDIT-C",
+        "Check",
+        "Substance Use Screening"
       ]
     },
     "write": {
@@ -3384,6 +3453,21 @@
       "Integer"
     ]
   },
+  "criminal_record": {
+    "read": {
+      "SDoH HRSN": [
+        "Q18"
+      ]
+    },
+    "write": {
+      "SDoH HRSN": [
+        "Smooth Criminal"
+      ]
+    },
+    "example_values": [
+      "ConditionOnset"
+    ]
+  },
   "current_weight_length_percentile": {
     "read": {
       "Wellness Encounters": [
@@ -3391,6 +3475,16 @@
       ]
     },
     "write": {},
+    "example_values": []
+  },
+  "dast_score": {
+    "read": {},
+    "write": {
+      "substance use screening": [
+        "Negative",
+        "Positive"
+      ]
+    },
     "example_values": []
   },
   "dermatitis": {
@@ -3570,12 +3664,52 @@
     },
     "example_values": []
   },
+  "education": {
+    "read": {
+      "SDoH HRSN": [
+        "Q10A"
+      ]
+    },
+    "write": {},
+    "example_values": []
+  },
+  "education_condition": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "Education Onset",
+        "Education_Onset",
+        "Education_Onset_2"
+      ]
+    },
+    "example_values": [
+      "ConditionOnset"
+    ]
+  },
   "education_level": {
     "read": {
       "LifecycleModule": []
     },
     "write": {},
     "example_values": []
+  },
+  "employment_condition": {
+    "read": {
+      "SDoH HRSN": [
+        "End Unemployment"
+      ]
+    },
+    "write": {
+      "SDoH HRSN": [
+        "Employed Full Time",
+        "Employed Not",
+        "Employed Part Time",
+        "Unemployed"
+      ]
+    },
+    "example_values": [
+      "ConditionOnset"
+    ]
   },
   "end_stage_renal_disease": {
     "read": {
@@ -3593,6 +3727,28 @@
     },
     "write": {
       "LifecycleModule": []
+    },
+    "example_values": []
+  },
+  "fall_risk_screening_code": {
+    "read": {},
+    "write": {
+      "fall_risk_screening": [
+        "High Fall Risk Code",
+        "Low Fall Risk Code",
+        "Moderate Fall Risk Code"
+      ]
+    },
+    "example_values": []
+  },
+  "fall_risk_screening_score": {
+    "read": {},
+    "write": {
+      "fall_risk_screening": [
+        "High Fall Risk Score",
+        "Low Fall Risk Score",
+        "Moderate Fall Risk Score"
+      ]
     },
     "example_values": []
   },
@@ -3659,7 +3815,10 @@
   },
   "first_language": {
     "read": {
-      "LifecycleModule": []
+      "LifecycleModule": [],
+      "SDoH HRSN": [
+        "Q5"
+      ]
     },
     "write": {},
     "example_values": []
@@ -3709,6 +3868,16 @@
     "example_values": [
       "CarePlanStart"
     ]
+  },
+  "food_insecurity": {
+    "read": {
+      "SDoH HRSN": [
+        "Q14",
+        "Q14B"
+      ]
+    },
+    "write": {},
+    "example_values": []
   },
   "gender": {
     "read": {
@@ -3791,6 +3960,9 @@
       "Pregnancy": [
         "Initial"
       ],
+      "SDoH HRSN": [
+        "Q21"
+      ],
       "Self Harm": [
         "Attempts_Suicide",
         "Initial"
@@ -3837,6 +4009,16 @@
         "Anemia_Encounter",
         "Brief_Examination",
         "Consult_Referral_to_Experts_Encounter"
+      ],
+      "anxiety_screening": [
+        "Determine Anxiety Level"
+      ],
+      "hark_screening": [
+        "Determine Results"
+      ],
+      "substance use screening": [
+        "Healthy",
+        "Unhealthy"
       ]
     },
     "write": {
@@ -3892,6 +4074,16 @@
       "ConditionOnset"
     ]
   },
+  "hark_screening_score": {
+    "read": {},
+    "write": {
+      "hark_screening": [
+        "High Score",
+        "Low Score"
+      ]
+    },
+    "example_values": []
+  },
   "history_nonfatal_ED_overdose": {
     "read": {
       "Prescribing Opioids for Chronic Pain and Treatment of OUD": [
@@ -3908,7 +4100,11 @@
     ]
   },
   "homeless": {
-    "read": {},
+    "read": {
+      "SDoH HRSN": [
+        "Q7"
+      ]
+    },
     "write": {
       "Homelessness": [
         "Begin_Homelessness",
@@ -3939,6 +4135,19 @@
       "\"chronic\"",
       "\"temporary\""
     ]
+  },
+  "household_size": {
+    "read": {
+      "SDoH HRSN": [
+        "Q6"
+      ]
+    },
+    "write": {
+      "SDoH HRSN": [
+        "Household_Size"
+      ]
+    },
+    "example_values": []
   },
   "hyperglycemia": {
     "read": {},
@@ -4020,7 +4229,11 @@
         "Lisinopril",
         "Lisinopril+",
         "Lisinopril_2",
-        "Lisinopril_3"
+        "Lisinopril_3",
+        "Losartan",
+        "Losartan 2",
+        "Losartan+",
+        "Losartan_3"
       ]
     },
     "write": {
@@ -4041,7 +4254,9 @@
         "HCTZ",
         "HCTZ+",
         "Lisinopril",
-        "Lisinopril+"
+        "Lisinopril+",
+        "Losartan",
+        "Losartan+"
       ]
     },
     "example_values": [
@@ -4054,7 +4269,8 @@
       "hypertension_medication": [
         "Amlodipine_2",
         "HCTZ_2",
-        "Lisinopril_2"
+        "Lisinopril_2",
+        "Losartan 2"
       ]
     },
     "example_values": [
@@ -4067,7 +4283,8 @@
       "hypertension_medication": [
         "Amlodipine_3",
         "HCTZ_3",
-        "Lisinopril_3"
+        "Lisinopril_3",
+        "Losartan_3"
       ]
     },
     "example_values": [
@@ -4225,7 +4442,11 @@
   },
   "income": {
     "read": {
-      "HealthInsuranceModule": []
+      "HealthInsuranceModule": [],
+      "SDoH HRSN": [
+        "Q11",
+        "Q3"
+      ]
     },
     "write": {},
     "example_values": []
@@ -4303,6 +4524,15 @@
     "example_values": [
       "Integer"
     ]
+  },
+  "insurance_status": {
+    "read": {
+      "SDoH HRSN": [
+        "Q12"
+      ]
+    },
+    "write": {},
+    "example_values": []
   },
   "joint_replacement": {
     "read": {
@@ -4535,7 +4765,10 @@
   },
   "marital_status": {
     "read": {
-      "LifecycleModule": []
+      "LifecycleModule": [],
+      "SDoH HRSN": [
+        "Q16"
+      ]
     },
     "write": {
       "LifecycleModule": []
@@ -4800,6 +5033,15 @@
     "example_values": [
       "true"
     ]
+  },
+  "no_vehicle_access": {
+    "read": {
+      "SDoH HRSN": [
+        "Q15"
+      ]
+    },
+    "write": {},
+    "example_values": []
   },
   "non_low_risk_pregnancy": {
     "read": {
@@ -5266,6 +5508,259 @@
       "true"
     ]
   },
+  "phq2_score": {
+    "read": {
+      "depression screening": [
+        "PHQ2 Results"
+      ]
+    },
+    "write": {
+      "depression screening": [
+        "PHQ2 Negative",
+        "PHQ2 Positive"
+      ]
+    },
+    "example_values": []
+  },
+  "phqa_score": {
+    "read": {},
+    "write": {
+      "depression screening": [
+        "Negative",
+        "Positive",
+        "YA Negative"
+      ]
+    },
+    "example_values": []
+  },
+  "poverty_ratio": {
+    "read": {
+      "SDoH HRSN": [
+        "Q14",
+        "Q14C"
+      ]
+    },
+    "write": {},
+    "example_values": []
+  },
+  "prapare_a1": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A1_No",
+        "A1_NotAnswer",
+        "A1_Yes"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a10": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A10A",
+        "A10B",
+        "A10C",
+        "A10_NotAnswer"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a11": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A11A",
+        "A11B",
+        "A11C",
+        "A11D",
+        "A11_NotAnswer"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a12": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A12_Medicaid",
+        "A12_Medicare",
+        "A12_None",
+        "A12_NotAnswer",
+        "A12_Private"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a14": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A14_Childcare",
+        "A14_Clothing",
+        "A14_Food",
+        "A14_Medicine",
+        "A14_NotAnswer",
+        "A14_Other",
+        "A14_Phone",
+        "A14_Utilities"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a15": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A15_No",
+        "A15_YesA",
+        "A15_YesB"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a16": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A16_FiveOrMore",
+        "A16_LessThanOne",
+        "A16_NotAnswer",
+        "A16_OneOrTwo",
+        "A16_ThreeToFive"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a17": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A17_LittleBit",
+        "A17_NotAnswer",
+        "A17_NotAtAll",
+        "A17_QuiteBit",
+        "A17_Somewhat",
+        "A17_VeryMuch"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a18": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A18_No",
+        "A18_NotAnswer",
+        "A18_Yes"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a19": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A19_No",
+        "A19_NotAnswer",
+        "A19_Yes"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a2": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A2_Asian",
+        "A2_Black",
+        "A2_Hawaiian",
+        "A2_NativeAmerican",
+        "A2_NotAnswer",
+        "A2_Other",
+        "A2_PacificIslander",
+        "A2_White"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a20": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A20_No",
+        "A20_NotAnswer",
+        "A20_Unsure",
+        "A20_Yes"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a21": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A21_No",
+        "A21_Yes"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a3": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A3_No",
+        "A3_NotAnswer",
+        "A3_Yes"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a4": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A4_No",
+        "A4_NotAnswer",
+        "A4_Yes"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a5": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A5_English",
+        "A5_NotAnswer",
+        "A5_Other"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a7": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A7_Homeless",
+        "A7_NotAnswer",
+        "A7_NotHomeless"
+      ]
+    },
+    "example_values": []
+  },
+  "prapare_a8": {
+    "read": {},
+    "write": {
+      "SDoH HRSN": [
+        "A8_No",
+        "A8_NotAnswer",
+        "A8_Yes"
+      ]
+    },
+    "example_values": []
+  },
   "prediabetes": {
     "read": {
       "LifecycleModule": [],
@@ -5364,6 +5859,9 @@
       ],
       "anemia_sub": [
         "Female"
+      ],
+      "hark_screening": [
+        "Check Eligibility"
       ],
       "medications": [
         "Determine Clinical Trial Eligibility"
@@ -5530,6 +6028,9 @@
       ],
       "Veteran Suicide Probabilities": [
         "Veteran"
+      ],
+      "anxiety_screening": [
+        "Check Eligibility"
       ]
     },
     "write": {
@@ -5643,6 +6144,10 @@
       "Metabolic Syndrome Disease Progression": [
         "Non_Veteran_Diabetes_Prevalence"
       ],
+      "SDoH HRSN": [
+        "Q1",
+        "Q2A"
+      ],
       "Self Harm": [
         "Initial"
       ],
@@ -5716,6 +6221,21 @@
       "ConditionOnset"
     ]
   },
+  "refugee": {
+    "read": {
+      "SDoH HRSN": [
+        "Q19"
+      ]
+    },
+    "write": {
+      "SDoH HRSN": [
+        "Refugee"
+      ]
+    },
+    "example_values": [
+      "ConditionOnset"
+    ]
+  },
   "retinopathy": {
     "read": {
       "Metabolic Syndrome Standards of Care": [
@@ -5763,6 +6283,15 @@
     "example_values": [
       "MedicationOrder"
     ]
+  },
+  "severe_housing_cost_burden": {
+    "read": {
+      "SDoH HRSN": [
+        "Q8"
+      ]
+    },
+    "write": {},
+    "example_values": []
   },
   "sexual_orientation": {
     "read": {
@@ -5874,6 +6403,22 @@
       "MedicationOrder"
     ]
   },
+  "social_isolation": {
+    "read": {
+      "SDoH HRSN": [
+        "End Isolation"
+      ]
+    },
+    "write": {
+      "SDoH HRSN": [
+        "Isolation",
+        "Limited Contact"
+      ]
+    },
+    "example_values": [
+      "ConditionOnset"
+    ]
+  },
   "socioeconomic_category": {
     "read": {
       "COPD": [
@@ -5946,6 +6491,15 @@
     "example_values": [
       "MedicationOrder"
     ]
+  },
+  "state": {
+    "read": {
+      "SDoH HRSN": [
+        "Q2A"
+      ]
+    },
+    "write": {},
+    "example_values": []
   },
   "statin_initial": {
     "read": {
@@ -6148,6 +6702,15 @@
       "CarePlanStart"
     ]
   },
+  "unemployed": {
+    "read": {
+      "SDoH HRSN": [
+        "Q11"
+      ]
+    },
+    "write": {},
+    "example_values": []
+  },
   "uti": {
     "read": {
       "Urinary Tract Infections": [
@@ -6182,6 +6745,9 @@
       "Osteoarthritis": [
         "Delay_Pre_Arthritis",
         "Veteran"
+      ],
+      "SDoH HRSN": [
+        "Q4"
       ],
       "Veteran Hyperlipidemia": [
         "veteran guard"

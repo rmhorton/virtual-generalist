@@ -108,10 +108,11 @@ icd_set_id,snomed_concept_id,snomed_concept_name,icd_code,icd_description
 395,13644009,Hypercholesterolemia (disorder),E78.0,Pure hypercholesterolemia
 295,1551000119108,Nonproliferative retinopathy due to type 2 diabetes mellitus (disorder),E11.65,Type 2 diabetes mellitus with hyperglycemia
 296,1551000119108,Nonproliferative retinopathy due to type 2 diabetes mellitus (disorder),Z79.4,Long term (current) use of insulin
-1064,16932000,Nausea and vomiting (disorder),K92.0,Hematemesis
-1065,16932000,Nausea and vomiting (disorder),O21.9,"Vomiting of pregnancy, unspecified"
-1062,16932000,Nausea and vomiting (disorder),R11,Nausea and vomiting
-1063,16932000,Nausea and vomiting (disorder),F50.2,Bulimia nervosa
+1061,422587007,Nausea (finding),R11.0,Nausea
+1062,249497008,Vomiting symptom (finding),R11.1,Vomiting
+1063,249497008,Vomiting symptom (finding),F50.2,Bulimia nervosa
+1064,249497008,Vomiting symptom (finding),K92.0,Hematemesis
+1065,249497008,Vomiting symptom (finding),O21.9,"Vomiting of pregnancy, unspecified"
 1194,185086009,Chronic obstructive bronchitis (disorder),J44,Other chronic obstructive pulmonary disease
 1153,19169002,Miscarriage in first trimester (disorder),O02.1,Missed abortion
 1154,19169002,Miscarriage in first trimester (disorder),O03.9,Complete or unspecified spontaneous abortion without complication
@@ -232,9 +233,12 @@ icd_set_id,snomed_concept_id,snomed_concept_name,icd_code,icd_description
 1040,34095006,Dehydration (disorder),E86.0,Dehydration
 1042,34095006,Dehydration (disorder),P74.1,Dehydration of newborn
 1271,34713006,Vitamin D deficiency (disorder),E55,Vitamin D deficiency
+1291,370143000,Major depressive disorder (disorder),F33.9,"Major depressive disorder, recurrent, unspecified"
+1289,370143000,Major depressive disorder (disorder),F32.9,"Major depressive disorder, single episode, unspecified"
+199,35489007,Depressive disorder (disorder),F32.3,"Major depressive disorder, single episode, severe with psychotic features"
+203,35489007,Depressive disorder (disorder),F32.9,"Major depressive disorder, single episode, unspecified"
 195,35489007,Depressive disorder (disorder),F31.76,"Bipolar disorder, in full remission, most recent episode depressed"
 196,35489007,Depressive disorder (disorder),F34.1,Dysthymic disorder
-199,35489007,Depressive disorder (disorder),F32.3,"Major depressive disorder, single episode, severe with psychotic features"
 202,35489007,Depressive disorder (disorder),F31.5,"Bipolar disorder, current episode depressed, severe, with psychotic features"
 210,35489007,Depressive disorder (disorder),F10.24,Alcohol dependence with alcohol-induced mood disorder
 206,35489007,Depressive disorder (disorder),F14.24,Cocaine dependence with cocaine-induced mood disorder
@@ -242,7 +246,6 @@ icd_set_id,snomed_concept_id,snomed_concept_name,icd_code,icd_description
 198,35489007,Depressive disorder (disorder),F14.94,"Cocaine use, unspecified with cocaine-induced mood disorder"
 200,35489007,Depressive disorder (disorder),F31.0,"Bipolar disorder, current episode hypomanic"
 201,35489007,Depressive disorder (disorder),F31.81,Bipolar II disorder
-203,35489007,Depressive disorder (disorder),F32.9,"Major depressive disorder, single episode, unspecified"
 204,35489007,Depressive disorder (disorder),F32.8,Other depressive episodes
 209,35489007,Depressive disorder (disorder),F32.89,Other specified depressive episodes
 211,35489007,Depressive disorder (disorder),F10.14,Alcohol abuse with alcohol-induced mood disorder
@@ -263,9 +266,6 @@ icd_set_id,snomed_concept_id,snomed_concept_name,icd_code,icd_description
 1107,36971009,Sinusitis (disorder),J30.9,"Allergic rhinitis, unspecified"
 1105,36971009,Sinusitis (disorder),J11.1,Influenza due to unidentified influenza virus with other respiratory manifestations
 1106,36971009,Sinusitis (disorder),J01.90,"Acute sinusitis, unspecified"
-1291,370143000,Major depressive disorder (disorder),F33.9,"Major depressive disorder, recurrent, unspecified"
-1289,370143000,Major depressive disorder (disorder),F32.9,"Major depressive disorder, single episode, unspecified"
-1290,370143000,Major depressive disorder (disorder),F34.1,Dysthymic disorder
 937,386661006,Fever (finding),M04.1,Periodic fever syndromes
 938,386661006,Fever (finding),R50.9,"Fever, unspecified"
 940,386661006,Fever (finding),R50.2,Drug induced fever
@@ -330,26 +330,26 @@ icd_set_id,snomed_concept_id,snomed_concept_name,icd_code,icd_description
 108,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),E11.32,Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy
 99,422034002,Retinopathy due to type 2 diabetes mellitus (disorder),H54.8,"Legal blindness, as defined in USA"
 1076,422587007,Nausea (finding),R11.0,Nausea
-843,42343007,Congestive heart failure (disorder),I11.0,Hypertensive heart disease with heart failure
-848,42343007,Congestive heart failure (disorder),P29.0,Neonatal cardiac failure
-853,42343007,Congestive heart failure (disorder),I50.20,Unspecified systolic (congestive) heart failure
-844,42343007,Congestive heart failure (disorder),I50.23,Acute on chronic systolic (congestive) heart failure
-849,42343007,Congestive heart failure (disorder),I50.22,Chronic systolic (congestive) heart failure
-854,42343007,Congestive heart failure (disorder),I50.31,Acute diastolic (congestive) heart failure
-855,42343007,Congestive heart failure (disorder),I50.30,Unspecified diastolic (congestive) heart failure
-860,42343007,Congestive heart failure (disorder),I50.3,Diastolic (congestive) heart failure
-845,42343007,Congestive heart failure (disorder),I50.43,Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure
-846,42343007,Congestive heart failure (disorder),I50.9,"Heart failure, unspecified"
-850,42343007,Congestive heart failure (disorder),I50.21,Acute systolic (congestive) heart failure
-856,42343007,Congestive heart failure (disorder),I50.1,"Left ventricular failure, unspecified"
-857,42343007,Congestive heart failure (disorder),I13.0,"Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-861,42343007,Congestive heart failure (disorder),I13.2,"Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease"
-859,42343007,Congestive heart failure (disorder),I50.42,Chronic combined systolic (congestive) and diastolic (congestive) heart failure
-851,42343007,Congestive heart failure (disorder),I50.32,Chronic diastolic (congestive) heart failure
-847,42343007,Congestive heart failure (disorder),I50.40,Unspecified combined systolic (congestive) and diastolic (congestive) heart failure
-858,42343007,Congestive heart failure (disorder),R09.89,Other specified symptoms and signs involving the circulatory and respiratory systems
-862,42343007,Congestive heart failure (disorder),I50.33,Acute on chronic diastolic (congestive) heart failure
-852,42343007,Congestive heart failure (disorder),I50.41,Acute combined systolic (congestive) and diastolic (congestive) heart failure
+843,88805009,Chronic congestive heart failure (disorder),I11.0,Hypertensive heart disease with heart failure
+848,88805009,Chronic congestive heart failure (disorder),P29.0,Neonatal cardiac failure
+853,88805009,Chronic congestive heart failure (disorder),I50.20,Unspecified systolic (congestive) heart failure
+844,88805009,Chronic congestive heart failure (disorder),I50.23,Acute on chronic systolic (congestive) heart failure
+849,88805009,Chronic congestive heart failure (disorder),I50.22,Chronic systolic (congestive) heart failure
+854,88805009,Chronic congestive heart failure (disorder),I50.31,Acute diastolic (congestive) heart failure
+855,88805009,Chronic congestive heart failure (disorder),I50.30,Unspecified diastolic (congestive) heart failure
+860,88805009,Chronic congestive heart failure (disorder),I50.3,Diastolic (congestive) heart failure
+845,88805009,Chronic congestive heart failure (disorder),I50.43,Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure
+846,88805009,Chronic congestive heart failure (disorder),I50.9,"Heart failure, unspecified"
+850,88805009,Chronic congestive heart failure (disorder),I50.21,Acute systolic (congestive) heart failure
+856,88805009,Chronic congestive heart failure (disorder),I50.1,"Left ventricular failure, unspecified"
+857,88805009,Chronic congestive heart failure (disorder),I13.0,"Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+861,88805009,Chronic congestive heart failure (disorder),I13.2,"Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease"
+859,88805009,Chronic congestive heart failure (disorder),I50.42,Chronic combined systolic (congestive) and diastolic (congestive) heart failure
+851,88805009,Chronic congestive heart failure (disorder),I50.32,Chronic diastolic (congestive) heart failure
+847,88805009,Chronic congestive heart failure (disorder),I50.40,Unspecified combined systolic (congestive) and diastolic (congestive) heart failure
+858,88805009,Chronic congestive heart failure (disorder),R09.89,Other specified symptoms and signs involving the circulatory and respiratory systems
+862,88805009,Chronic congestive heart failure (disorder),I50.33,Acute on chronic diastolic (congestive) heart failure
+852,88805009,Chronic congestive heart failure (disorder),I50.41,Acute combined systolic (congestive) and diastolic (congestive) heart failure
 1251,43339004,Hypokalemia (disorder),E87.6,Hypokalemia
 1126,43724002,Chill (finding),R68.83,Chills (without fever)
 1023,43878008,Streptococcal sore throat (disorder),J03.00,"Acute streptococcal tonsillitis, unspecified"
@@ -522,10 +522,6 @@ icd_set_id,snomed_concept_id,snomed_concept_name,icd_code,icd_description
 901,87628006,Bacterial infectious disease (disorder),B96.89,Other specified bacterial agents as the cause of diseases classified elsewhere
 907,87628006,Bacterial infectious disease (disorder),L08.9,"Local infection of the skin and subcutaneous tissue, unspecified"
 902,87628006,Bacterial infectious disease (disorder),A77.49,Other ehrlichiosis
-889,88805009,Chronic congestive heart failure (disorder),I50.22,Chronic systolic (congestive) heart failure
-890,88805009,Chronic congestive heart failure (disorder),I50.9,"Heart failure, unspecified"
-891,88805009,Chronic congestive heart failure (disorder),I50.32,Chronic diastolic (congestive) heart failure
-892,88805009,Chronic congestive heart failure (disorder),I50.42,Chronic combined systolic (congestive) and diastolic (congestive) heart failure
 219,89627008,Hyponatremia (disorder),E87.1,Hypo-osmolality and hyponatremia
 1145,90560007,Inflammatory disorder due to increased blood urate level (disorder),M10,Gout
 1146,90560007,Inflammatory disorder due to increased blood urate level (disorder),M1A,Chronic gout

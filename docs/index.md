@@ -6,6 +6,7 @@
 
 * Bayesian networks:
    - [inpatients](https://rmhorton.github.io/virtual-generalist/bayes_net_inpatient.html)
+   - [real](https://rmhorton.github.io/virtual-generalist/bayes_net_real.html)
 
 * Co-occurrence graphs:
    - inpatients

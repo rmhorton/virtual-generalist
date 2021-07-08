@@ -416,7 +416,6 @@ icd_set_id,snomed_concept_id,snomed_concept_name,icd_code,icd_description
 534,5602001,Opioid abuse (disorder),F11.1,Opioid abuse
 531,5602001,Opioid abuse (disorder),F11.99,"Opioid use, unspecified with unspecified opioid-induced disorder"
 749,57676002,Joint pain (finding),M25.5,Pain in joint
-1263,59621000,Essential hypertension (disorder),I10,Essential (primary) hypertension
 1010,60046008,Pleural effusion (disorder),J90,"Pleural effusion, not elsewhere classified"
 1011,60046008,Pleural effusion (disorder),J94.8,Other specified pleural conditions
 1012,60046008,Pleural effusion (disorder),J91,Pleural effusion in conditions classified elsewhere

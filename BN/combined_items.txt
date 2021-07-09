@@ -1,0 +1,187 @@
+0
+Chronic sinusitis (disorder)
+Hypokalemia (disorder)
+Sepsis (disorder)
+Hemoptysis (finding)
+Major depressive disorder (disorder)
+Hyponatremia (disorder)
+Radiologic infiltrate of lung (disorder)
+Opioid abuse (disorder)
+Shock (disorder)
+Hypercholesterolemia (disorder)
+Proliferative retinopathy due to type 2 diabetes mellitus (disorder)
+Vomiting symptom (finding)
+Acquired absence of organ (disorder)
+Secondary malignant neoplasm of colon (disorder)
+month_09
+Chronic congestive heart failure (disorder)
+Heart failure (disorder)
+Paroxysmal atrial fibrillation (disorder)
+Acute exacerbation of chronic obstructive airways disease (disorder)
+Seasonal allergic rhinitis (disorder)
+Headache (finding)
+age_80_plus
+Cough (finding)
+Sinusitis (disorder)
+race_other
+Cystitis (disorder)
+Hyperglycemia (disorder)
+Recurrent urinary tract infection (disorder)
+month_06
+month_01
+Familial Alzheimer's disease of early onset (disorder)
+Chronic kidney disease stage 3 (disorder)
+month_08
+month_03
+Pain (finding)
+Hypoxemia (disorder)
+bmi_severely_obese
+Acute bronchitis (disorder)
+bmi_obese
+Malignant neoplasm of breast (disorder)
+Acute viral pharyngitis (disorder)
+month_05
+Asthma (disorder)
+Epilepsy (disorder)
+Coronary arteriosclerosis (disorder)
+ethnicity_other
+Peripheral nerve disease (disorder)
+Influenza (disorder)
+Retinopathy due to type 2 diabetes mellitus (disorder)
+Neuropathy due to type 2 diabetes mellitus (disorder)
+Hypertension
+Chronic neck pain (finding)
+ethnicity_unknown
+Acute bacterial sinusitis (disorder)
+Seizure disorder (disorder)
+Bleeding from anus (disorder)
+gender_other
+age_65_79
+Sepsis caused by virus (disorder)
+Rupture of appendix (disorder)
+Chill (finding)
+bmi_overweight
+Eclampsia in pregnancy (disorder)
+a1c_missing
+gender_F
+Nasal congestion (finding)
+Fatigue (finding)
+bmi_healthy
+Contact dermatitis (disorder)
+a1c_severely_elevated
+Chronic pain (finding)
+Hypertriglyceridemia (disorder)
+Osteoporosis (disorder)
+Primary malignant neoplasm of colon (disorder)
+Pulmonary emphysema (disorder)
+Chronic kidney disease stage 2 (disorder)
+Fibromyalgia (disorder)
+Rheumatoid arthritis (disorder)
+Alzheimer's disease (disorder)
+a1c_low
+Carcinoma in situ of prostate (disorder)
+month_12
+gender_unknown
+race_hawaiian
+Diabetes mellitus type 2 (disorder)
+a1c_elevated
+month_07
+age_24_43
+bmi_underweight
+Metabolic syndrome X (disorder)
+Chronic intractable migraine without aura (disorder)
+ethnicity_hispanic
+Alcoholism (disorder)
+Sore throat symptom (finding)
+Muscle pain (finding)
+Hypoxia (disorder)
+race_unknown
+Dehydration (disorder)
+Miscarriage in first trimester (disorder)
+Overlapping malignant neoplasm of colon (disorder)
+a1c_normal
+age_18_23
+Diarrhea symptom (finding)
+Pre-eclampsia (disorder)
+Reactive airway disease (disorder)
+Acute respiratory failure (disorder)
+month_10
+race_native
+Idiopathic atrophic hypothyroidism (disorder)
+Tubal pregnancy (disorder)
+Smokes tobacco daily (finding)
+Streptococcal sore throat (disorder)
+Urinary tract infectious disease (disorder)
+Malignant neoplasm of colon (disorder)
+Escherichia coli urinary tract infection (disorder)
+Vitamin D deficiency (disorder)
+Miscarriage in first trimester
+Dyspnea (finding)
+Appendicitis (disorder)
+Hypothyroidism (disorder)
+Dementia (disorder)
+Atopic dermatitis (disorder)
+Chronic kidney disease (disorder)
+Acute respiratory distress syndrome (disorder)
+Nonproliferative retinopathy due to type 2 diabetes mellitus (disorder)
+Coronary artery bypass grafting (procedure)
+a1c_prediabetes
+Injury of kidney (disorder)
+race_white
+gender_M
+Gallbladder calculus (disorder)
+ethnicity_nonhispanic
+Hyperlipidemia (disorder)
+month_11
+Wheezing (finding)
+Cerebrovascular accident (disorder)
+Bacterial infectious disease (disorder)
+Cerebral palsy (disorder)
+Cardiac arrest (disorder)
+Loss of taste (finding)
+Inflammatory disorder due to increased blood urate level (disorder)
+Child attention deficit disorder (disorder)
+month_02
+Chronic kidney disease stage 1 (disorder)
+Depressive disorder (disorder)
+Septic shock (disorder)
+race_asian
+Gastroesophageal reflux disease (disorder)
+Acute deep venous thrombosis (disorder)
+History of myocardial infarction (situation)
+Benign prostatic hyperplasia (disorder)
+Chronic low back pain (finding)
+Osteoarthritis of knee (disorder)
+Joint pain (finding)
+Ventricular tachycardia (disorder)
+Peripheral vascular disease (disorder)
+Acute cholecystitis (disorder)
+bmi_missing
+Chronic kidney disease stage 4 (disorder)
+Disease caused by Severe acute respiratory syndrome coronavirus 2 (disorder)
+Renal dialysis (procedure)
+Myocardial infarction (disorder)
+race_black
+End stage renal disease (disorder)
+Anemia (disorder)
+Injury of heart (disorder)
+Pleural effusion (disorder)
+Recurrent rectal polyp (disorder)
+month_04
+Pneumonia (disorder)
+Intellectual disability (disorder)
+Polyp of colon (disorder)
+Chronic obstructive bronchitis (disorder)
+Acute pulmonary embolism (disorder)
+Osteoarthritis of hip (disorder)
+Acidosis (disorder)
+Perennial allergic rhinitis with seasonal variation (disorder)
+Fever (finding)
+Nausea (finding)
+Arteriosclerotic vascular disease (disorder)
+age_44_64
+Obstructive sleep apnea syndrome (disorder)
+Atrial fibrillation (disorder)
+Perennial allergic rhinitis (disorder)
+Viral sinusitis (disorder)
+Respiratory distress (finding)

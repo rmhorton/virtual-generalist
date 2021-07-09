@@ -9,7 +9,11 @@
    - [real](https://rmhorton.github.io/virtual-generalist/bayes_net_real.html)
 
 * Co-occurrence graphs:
-   - inpatients
+   - real
+      + by [confidence](https://rmhorton.github.io/virtual-generalist/cooccurrence_real.html?metric=confidence)
+      + by [lift](https://rmhorton.github.io/virtual-generalist/cooccurrence_real.html?metric=lift)
+      + by [log2lift](https://rmhorton.github.io/virtual-generalist/cooccurrence_real.html?metric=log2lift)
+   - simulated
       + by [confidence](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?metric=confidence)
       + by [lift](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?metric=lift)
       + by [log2lift](https://rmhorton.github.io/virtual-generalist/inpatient_cooccurrence.html?metric=log2lift)

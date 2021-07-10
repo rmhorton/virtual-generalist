@@ -85,7 +85,7 @@ gender_unknown
 race_hawaiian
 Diabetes mellitus type 2 (disorder)
 a1c_elevated
-month_07
+month_07s
 age_24_43
 bmi_underweight
 Metabolic syndrome X (disorder)

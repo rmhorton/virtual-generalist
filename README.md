@@ -9,6 +9,8 @@ Modeling complex co-morbidities in the Synthea patient simulator.
 
 * `doc/` Experiments, medical code taxonomies
 
+* `docs/` HTML outputs visualized on [web pages](https://github.com/rmhorton/virtual-generalist/blob/main/docs/index.md)
+
 * `paper/` text and citations for Synthea competition submission. 
 
 * `R/` Reusable R code 

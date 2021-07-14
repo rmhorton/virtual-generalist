@@ -3,7 +3,7 @@ Modeling complex co-morbidities in the Synthea patient simulator.
 
 ## Contents of this repository
 
-* `virtual_generalist_module/` virtual_general_ckd module and lookup tables
+* `virtual_generalist_module/` virtual_generalist_ckd module and lookup tables
 	
 * `notebooks/` Databricks notebooks to run the feature engineering and model building code on simulated data. We include HTML versions as well, if you just want to read it or copy code.
 

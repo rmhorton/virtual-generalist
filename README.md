@@ -1,5 +1,5 @@
 # virtual-generalist
-A complex co-morbidities module for the Synthea patient simulator.
+Modeling complex co-morbidities in the Synthea patient simulator.
 
 ## Contents of this repository
 

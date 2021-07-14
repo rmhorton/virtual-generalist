@@ -1,6 +1,8 @@
 # virtual-generalist
 Modeling complex co-morbidities in the Synthea patient simulator.
 
+Watch our [5-minute overview](https://youtu.be/HqB_thGSm1c).
+
 ## Contents of this repository
 
 * `virtual_generalist_module/` virtual_generalist_ckd module and lookup tables

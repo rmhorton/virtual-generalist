@@ -1,0 +1,173 @@
+{
+  "name": "Virtual Generalist",
+  "remarks": [
+    "output single output layer from Bayes net using conditional probability tables"
+  ],
+  "states": {
+    "Initial": {
+      "name": "Initial",
+      "type": "Initial",
+      "direct_transition": "Delay_For_CKD"
+    },
+    "Delay_For_CKD": {
+      "type": "Delay",
+      "remarks": [
+        "The ckd variable must be set before this loop runs."
+      ],
+      "exact": {
+        "quantity": 45,
+        "unit": "years"
+      },
+      "direct_transition": "Begin_Loop",
+      "name": "Delay_For_CKD"
+    },
+    "Begin_Loop": {
+      "name": "Begin_Loop",
+      "type": "Simple",
+      "remarks": [
+        "I couldn't figure out how to put a boolean attribute in the transition table."
+      ],
+      "conditional_transition": [
+        {
+          "transition": "Determine CKD Diabetic",
+          "condition": {
+            "condition_type": "Attribute",
+            "attribute": "diabetes",
+            "operator": "==",
+            "value": true
+          }
+        },
+        {
+          "transition": "Determine CKD Nondiabetic"
+        }
+      ]
+    },
+    "Determine CKD Diabetic": {
+      "name": "Determine CKD Diabetic",
+      "type": "Simple",
+      "lookup_table_transition": [
+          {
+            "transition": "ckd_next_0",
+            "lookup_table_name": "virtual_generalist_ckd_diabetic.csv",
+            "default_probability": 1
+          },
+          {
+            "transition": "ckd_next_1",
+            "lookup_table_name": "virtual_generalist_ckd_diabetic.csv",
+            "default_probability": 0
+          },
+          {
+            "transition": "ckd_next_2",
+            "lookup_table_name": "virtual_generalist_ckd_diabetic.csv",
+            "default_probability": 0
+          },
+          {
+            "transition": "ckd_next_3",
+            "lookup_table_name": "virtual_generalist_ckd_diabetic.csv",
+            "default_probability": 0
+          },
+          {
+            "transition": "ckd_next_4",
+            "lookup_table_name": "virtual_generalist_ckd_diabetic.csv",
+            "default_probability": 0
+          },
+          {
+            "transition": "ckd_next_5",
+            "lookup_table_name": "virtual_generalist_ckd_diabetic.csv",
+            "default_probability": 0
+          }
+        ]
+    },
+    "Determine CKD Nondiabetic": {
+      "name": "Determine CKD Nondiabetic",
+      "type": "Simple",
+      "lookup_table_transition": [
+          {
+            "transition": "ckd_next_0",
+            "lookup_table_name": "virtual_generalist_ckd_nondiabetic.csv",
+            "default_probability": 1
+          },
+          {
+            "transition": "ckd_next_1",
+            "lookup_table_name": "virtual_generalist_ckd_nondiabetic.csv",
+            "default_probability": 0
+          },
+          {
+            "transition": "ckd_next_2",
+            "lookup_table_name": "virtual_generalist_ckd_nondiabetic.csv",
+            "default_probability": 0
+          },
+          {
+            "transition": "ckd_next_3",
+            "lookup_table_name": "virtual_generalist_ckd_nondiabetic.csv",
+            "default_probability": 0
+          },
+          {
+            "transition": "ckd_next_4",
+            "lookup_table_name": "virtual_generalist_ckd_nondiabetic.csv",
+            "default_probability": 0
+          },
+          {
+            "transition": "ckd_next_5",
+            "lookup_table_name": "virtual_generalist_ckd_nondiabetic.csv",
+            "default_probability": 0
+          }
+        ]
+    },
+    "ckd_next_0": {
+      "name": "ckd_next_0",
+      "type": "SetAttribute",
+      "attribute": "ckd",
+      "direct_transition": "Loop_Back",
+      "value": 0
+    },
+    "ckd_next_1": {
+      "name": "ckd_next_1",
+      "type": "SetAttribute",
+      "attribute": "ckd",
+      "direct_transition": "Loop_Back",
+      "value": 1
+    },
+    "ckd_next_2": {
+      "name": "ckd_next_2",
+      "type": "SetAttribute",
+      "attribute": "ckd",
+      "direct_transition": "Loop_Back",
+      "value": 2
+    },
+    "ckd_next_3": {
+      "name": "ckd_next_3",
+      "type": "SetAttribute",
+      "attribute": "ckd",
+      "direct_transition": "Loop_Back",
+      "value": 3
+    },
+    "ckd_next_4": {
+      "name": "ckd_next_4",
+      "type": "SetAttribute",
+      "attribute": "ckd",
+      "direct_transition": "Loop_Back",
+      "value": 4
+    },
+    "ckd_next_5": {
+      "name": "ckd_next_5",
+      "type": "SetAttribute",
+      "attribute": "ckd",
+      "direct_transition": "Loop_Back",
+      "value": 5
+    },
+    "Loop_Back": {
+      "name": "Loop_Back",
+      "type": "Delay",
+      "remarks": [
+        "This is the same delay as the loop in the Metabolic Syndrome Disease Progression module."
+      ],
+      "exact": {
+        "quantity": 1,
+        "unit": "months"
+      },
+      "direct_transition": "Begin_Loop"
+    }
+  },
+  "gmf_version": 2
+}

@@ -9,27 +9,9 @@ Watch our [5-minute overview](https://youtu.be/HqB_thGSm1c).
 	
 * `notebooks/` Databricks notebooks to run the feature engineering and model building code on simulated data. We include HTML versions as well, if you just want to read it or copy code.
 
-* `doc/` Experiments, medical code taxonomies
+* `doc/` Experiments, examples, data tables, etc.
 
 * `docs/` HTML outputs visualized on [web pages](https://github.com/rmhorton/virtual-generalist/blob/main/docs/index.md)
-
-* `paper/` text and citations for Synthea competition submission. 
-
-* `R/` Reusable R code 
-
-
-## Links to Synthea resources
-
-* Github repo for the Synthea patient simulation system:
-https://github.com/synthetichealth/synthea
-
-	- The [Basic Setup and Running](https://github.com/synthetichealth/synthea/wiki/Basic-Setup-and-Running) page explains how to obtain and run the jar file without building the whole system. It works fine on open java.
-
-
-* This file contains the records of 1000 simulated people in CSV format:
-https://storage.googleapis.com/synthea-public/synthea_sample_data_csv_apr2020.zip
-
-* This 1000 patient dataset is a sample from a bigger dataset which has records of 1M fake people: https://synthea.mitre.org/downloads.
 
 ## Attributes and concepts
 
@@ -59,3 +41,17 @@ Several codes have more than one description; these are the discrepancies that s
 7  84757009                      Epilepsy  2086
 8  84757009           Epilepsy (disorder)   191
 ```
+
+
+## Links to Synthea resources
+
+* Github repo for the Synthea patient simulation system:
+https://github.com/synthetichealth/synthea
+
+	- The [Basic Setup and Running](https://github.com/synthetichealth/synthea/wiki/Basic-Setup-and-Running) page explains how to obtain and run the jar file without building the whole system. It works fine on open java.
+
+
+* This file contains the records of 1000 simulated people in CSV format:
+https://storage.googleapis.com/synthea-public/synthea_sample_data_csv_apr2020.zip
+
+* This 1000 patient dataset is a sample from a bigger dataset which has records of 1M fake people: https://synthea.mitre.org/downloads.

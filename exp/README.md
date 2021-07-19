@@ -3,11 +3,11 @@
 
  * `bnlearn_example.Rmd`
  
-        - This is an RMarkdown file that implements a simple data simulation based on a published Bayes net example, then trains a Bayes net on the simulated data.
-        
-        - The round-trip from Bayes net to simulation back to Bayes net shows that we get (more or less) the same probabilities back that we started with.
-        
-        - Shows an example of conditional independence between variables.
+  - This is an RMarkdown file that implements a simple data simulation based on a published Bayes net example, then trains a Bayes net on the simulated data.
+
+  - The round-trip from Bayes net to simulation back to Bayes net shows that we get (more or less) the same probabilities back that we started with.
+
+  - Shows an example of conditional independence between variables.
         
  * `bnlearn_example.md`
  

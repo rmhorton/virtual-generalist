@@ -1,5 +1,11 @@
 This directory contains a variety of data files, examples, and other miscellaneous items that help us understand the Synthea system and the technologies we use in the Virtual Generalist.
 
+## ICD10 to SNOMED map
+
+* `icd2synthea_map.csv`
+ 	- this is a hand-curated map of ICD10 codes to the SNOMED concepts we use in the Virtual Generalist. These include the more common SNOMED concepts found in Syntha EMR data (see `code_description_tally.csv`), as well as a few additional concepts we are considering adding.
+ 	- ICD10 codes are treated as regular expression patterns; the pattern `E11` matches any more specific code that contains `E11`.
+ 	- There is one row per ICD10 code pattern. If more than one ICD10 code must be present at the same time to indicate a SNOMED concept, all of the required ICD10 codes must have the same `icd_code_set` value.
 
 ## Attributes and concepts
 

@@ -27,7 +27,7 @@ library(bnlearn)
 This example follows Figure 2.1 in  [_Bayesian Artificial Intelligence_](https://bayesian-intelligence.com/publications/bai/), [chapter 2](https://bayesian-intelligence.com/publications/bai/book/BAI_Chapter2.pdf).
 
 
-We'll use the probabilities given in the figure to generate some simulated data, then see if `bnlearn` can determine the structure of the Bayes Ne= from the simulated data.
+We'll use the probabilities given in the figure to generate some simulated data, then see if `bnlearn` can determine the structure of the Bayes Net from the simulated data.
 
 
 ```r
@@ -217,7 +217,7 @@ cpquery(cancer_fit, (Smoking=='T'), (Dyspnoea=='F' & Xray=='F'))
 ```
 ## [1] 0.2907904
 ```
-# Conditionally independence between nodes
+# Conditional independence between nodes
 
 The value for Dyspnoea should have some correlation with the value for Xray; people who are positive for Dyspnoea should be more likely to have a positive Xray. But since this connection depends on the state of Cancer, the connection between Dyspnoea and Xray should be broken if we fix the value of Cancer.
 

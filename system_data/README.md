@@ -1,4 +1,4 @@
-This directory contains a variety of data files, examples, and other miscellaneous items that help us understand the Synthea system and the technologies we use in the Virtual Generalist.
+This directory contains a variety of data files that help us understand the Synthea system and the technologies we use in the Virtual Generalist.
 
 ## ICD10 to SNOMED map
 

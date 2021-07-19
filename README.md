@@ -14,21 +14,6 @@ Watch our [5-minute overview](https://youtu.be/HqB_thGSm1c).
 * `docs/` HTML outputs visualized on [web pages](https://github.com/rmhorton/virtual-generalist/blob/main/docs/index.md)
 
 
-### SNOMED code-description descrepancies
-
-Several codes have more than one description; these are the discrepancies that showed up in our 100k sample:
-```
-       code                   description tally
-1 233604007          Pneumonia (disorder) 16326
-2 233604007                     Pneumonia   496
-3 427089005              Male Infertility    13
-4 427089005 Diabetes from Cystic Fibrosis     9
-5  55680006                 Drug overdose  4607
-6  55680006      Drug overdose (disorder)     1
-7  84757009                      Epilepsy  2086
-8  84757009           Epilepsy (disorder)   191
-```
-
 
 ## Links to Synthea resources
 

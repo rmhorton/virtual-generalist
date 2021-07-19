@@ -9,7 +9,9 @@ Watch our [5-minute overview](https://youtu.be/HqB_thGSm1c).
 	
 * `notebooks/` Databricks notebooks to run the feature engineering and model building code on simulated data. We include HTML versions as well, if you just want to read it or copy code.
 
-* `doc/` Experiments, examples, data tables, etc.
+* `exp/` Experiments, examples, 
+
+* `system_data/` data tables characterizing the current collection of Synthea modules, mapping ICD10 to SNOMED, etc.
 
 * `docs/` HTML outputs visualized on [web pages](https://github.com/rmhorton/virtual-generalist/blob/main/docs/index.md)
 

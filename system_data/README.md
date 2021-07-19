@@ -11,18 +11,18 @@ This directory contains a variety of data files that help us understand the Synt
 
 ## Attributes and concepts
 
-* [attributes.json](https://github.com/rmhorton/virtual-generalist/blob/main/system_data/attributes.json)
+* [attributes.json](attributes.json)
 	- This file was generated with the command `./gradlew attributes`
 	- Attributes read or written by either the framework or modules are given in this file.
 
-* [concepts.csv](https://github.com/rmhorton/virtual-generalist/blob/main/system_data/concepts.csv)
+* [concepts.csv](concepts.csv)
 	- This file was generated with the command `./gradlew concepts`
 	- All SNOMED-CT, RxNorm, and LOINC terms emitted by the simulation (including its modules) are included here (plus a few other things).
 	- This file is read by the Databricks notebook to annotate the 
 
 ## Count of codes and descriptions
 
-* [code_description_tally.csv](https://github.com/rmhorton/virtual-generalist/blob/main/system_data/code_description_tally.csv)
+* [code_description_tally.csv]code_description_tally.csv)
 	- Generated from a simulated population of 100k patients: `select code, description, count(*) tally from conditions group by code, description order by tally desc`
 	- These were grouped by both code and description because there are some discrepancies (see below).
 

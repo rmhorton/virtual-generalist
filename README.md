@@ -6,17 +6,18 @@ Watch our [5-minute overview](https://youtu.be/HqB_thGSm1c).
 
 ## Contents of this repository
 
-* [validation](validation): quantifying distribution differences between real and simulated populations.
+* [docs](docs): HTML outputs visualized on [web pages](https://rmhorton.github.io/virtual-generalist/)
 
-* [virtual_generalist_module](virtual_generalist_module): CKD stage-trasition module and lookup tables
+* [exp](exp): Experiments, examples, etc.
 	
 * [notebooks](notebooks): Databricks notebooks to run the feature engineering and model building code on simulated data. We include HTML versions as well, if you just want to read it or copy code.
 
-* [exp](exp): Experiments, examples, etc.
-
 * [system_data](system_data): data tables characterizing the current collection of Synthea modules, mapping ICD10 to SNOMED, etc.
 
-* [docs](docs): HTML outputs visualized on [web pages](https://github.com/rmhorton/virtual-generalist/blob/main/docs/index.md)
+* [validation](validation): quantifying distribution differences between real and simulated populations.
+
+* [virtual_generalist_module](virtual_generalist_module): CKD stage-trasition module and lookup tables
+
 
 
 

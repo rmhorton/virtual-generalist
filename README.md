@@ -3,7 +3,7 @@ Modeling complex co-morbidities in the Synthea patient simulator.
 
 This project won second place in the 2021 [Synthetic Health Data Challenge](https://www.healthit.gov/topic/scientific-initiatives/pcor/synthetic-health-data-generation-accelerate-patient-centered-outcomes), sponsored by the HHS Office of the National Coordinator for Health Information Technology. Prize money will be donated to [sustainable Harvest International](https://www.sustainableharvest.org/).
 
-This work is described in the [final report](https://github.com/rmhorton/virtual-generalist/blob/main/Virtual_Generalist_report.pdf) and the validation approach is described in the [appendixn](https://github.com/rmhorton/virtual-generalist/blob/main/validation/Virtual%20Generalist%20Validation%20Appendix.pdf).
+This work is described in the [final report](https://github.com/rmhorton/virtual-generalist/blob/main/Virtual_Generalist_report.pdf) and the validation approach is detailed in the [appendix](https://github.com/rmhorton/virtual-generalist/blob/main/validation/Virtual%20Generalist%20Validation%20Appendix.pdf).
 We also have a [5-minute overview](https://youtu.be/HqB_thGSm1c) video.
 
 ## Contents of this repository

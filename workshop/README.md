@@ -8,4 +8,15 @@ However, the same assortment of statistically inappropriate relationships that m
 
 After negotiating this field of potential pitfalls, we are able to identify a set of features correlated (but not too strongly correlated) with a clinical outcome, which lets us demonstrate a machine learning classifier. The model we use is an Explainable Boosting Machine (EBM), a form of generalized additive model that comes with its own visualization tools for understanding the contribution of each feature to the prediction.
 
-Some notebooks are provided in Jupyter format (ipynb) as well, so you can view them on Github.
+These are the HTML versions of the notebooks:
+
+- [0_Load_Data](https://rmhorton.github.io/virtual-generalist/workshop/0_Load_Data.html)
+- [1_Synthea_exploration](https://rmhorton.github.io/virtual-generalist/workshop/1_Synthea_exploration.html)
+- [2_Synthea_cooccurrence](https://rmhorton.github.io/virtual-generalist/workshop/2_Synthea_cooccurrence.html)
+- [3_Synthea_predict_breast_cancer](https://rmhorton.github.io/virtual-generalist/workshop/3_Synthea_predict_breast_cancer.html)
+
+Co-occurrence plots, using various metrics:
+- [confidence](https://rmhorton.github.io/virtual-generalist/workshop/synthea_cooccurrence_demo.html) 
+- [lift](https://rmhorton.github.io/virtual-generalist/workshop/synthea_cooccurrence_demo.html?metric=lift)
+- [log2lift](https://rmhorton.github.io/virtual-generalist/workshop/synthea_cooccurrence_demo.html?metric=log2lift)
+Some notebooks are provided in Jupyter format (ipynb) as well, in case you find that easier to view or use.

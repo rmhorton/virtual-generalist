@@ -19,4 +19,4 @@ Co-occurrence plots, using various metrics:
 - [confidence](https://rmhorton.github.io/virtual-generalist/workshop/synthea_cooccurrence_demo.html) 
 - [lift](https://rmhorton.github.io/virtual-generalist/workshop/synthea_cooccurrence_demo.html?metric=lift)
 - [log2lift](https://rmhorton.github.io/virtual-generalist/workshop/synthea_cooccurrence_demo.html?metric=log2lift)
-Some notebooks are provided in Jupyter format (ipynb) as well, in case you find that easier to view or use.
+

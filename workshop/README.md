@@ -21,3 +21,10 @@ Co-occurrence plots, using various metrics:
 - [lift](https://rmhorton.github.io/virtual-generalist/workshop/synthea_cooccurrence_demo.html?metric=lift)
 - [log2lift](https://rmhorton.github.io/virtual-generalist/workshop/synthea_cooccurrence_demo.html?metric=log2lift)
 
+
+## AMIA 2022 Workshop links
+
+- [This page](https://aka.ms/SyntheaMLgithub)
+- [Databricks setup](https://aka.ms/amia2022)
+- [feedback survey](https://aka.ms/SyntheaMLsurvey)
+- 

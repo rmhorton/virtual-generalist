@@ -26,5 +26,5 @@ Co-occurrence plots, using various metrics:
 
 - [This page](https://aka.ms/SyntheaMLgithub)
 - [Databricks setup](https://aka.ms/amia2022)
-- [feedback survey](https://aka.ms/SyntheaMLsurvey)
+- [Feedback survey](https://aka.ms/SyntheaMLsurvey)
 

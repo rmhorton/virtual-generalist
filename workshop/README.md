@@ -1,6 +1,6 @@
 # Introduction to Data Science with Simulated EMR Data
 
-## Sanity checking skills for clinician informaticists
+## Sanity checking skills for clinical informatics
 
 This is a collection of open source educational materials (mostly Databricks notebooks) for introducing fundamental concepts of data science to a clinical audience. We focus on exploratory analysis, visualization, and interpretable machine learning (ML) models assuming that these will be particularly useful skills for clinician data scientists involved in planning and oversight of research, who will need to sanity check various findings.
 
